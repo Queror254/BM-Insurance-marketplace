@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Result Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="css/test.css" />
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Reduced-width Sidebar -->
+            <div class="col-md-3 sidebar">
+                <div class="logo_title">
+                    <img src="img/BMlogo.png" alt="">
+                </div>
+
+                <!-- Chart Container -->
+                <div class="chart-container">
+                    <h2>Chart Container</h2>
+                    <!-- Add your chart component or content here -->
+                    <p>This is where your chart will be displayed.</p>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-heading">Filters</h3>
+                    <!-- Add your filter options here -->
+                    <label for="filter1">Filter 1:</label>
+                    <select id="filter1" class="form-control">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                    </select>
+
+                    <label for="filter2">Filter 2:</label>
+                    <select id="filter2" class="form-control">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 main-content">
+                <div class="spacer"></div>
+
+                <div class="filter-card mt-4">
+                    <div class="filter-option">
+                        <label for="insuranceType">Insurance Type:</label>
+                        <select id="insuranceType" class="form-control">
+                            <option value="health">Health</option>
+                            <option value="auto">Auto</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+
+                    <div class="filter-option">
+                        <label for="age">Age:</label>
+                        <select id="age" class="form-control">
+                            <option value="under18">Under 18</option>
+                            <option value="18to25">18-25</option>
+                            <option value="26to40">26-40</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+
+                    <div class="filter-option">
+                        <label for="zipcode">Zipcode:</label>
+                        <input type="text" id="zipcode" class="form-control" placeholder="Enter Zipcode">
+                    </div>
+
+                    <div class="search-option mt-3">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-search"></i> Search
+                        </button>
+                    </div>
+
+                    <div class="filter-option">
+                        <label for="sortByPrice">Sort by Price:</label>
+                        <select id="sortByPrice" class="form-control">
+                            <option value="lowToHigh">Low to High</option>
+                            <option value="highToLow">High to Low</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+
+                </div>
+                <!--search result section-->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, for certain features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

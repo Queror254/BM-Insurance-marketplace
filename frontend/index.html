@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Wilio Survey, Quotation, Review and Register form Wizard by Ansonika.">
+	<meta name="author" content="Ansonika">
+
+	<title>Baron Meddy | Get health insurance quote with a few clicks.</title>
+
+	<!-- Favicons-->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+		href="img/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+		href="img/apple-touch-icon-144x144-precomposed.png">
+
+	<!-- GOOGLE WEB FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+	<!--pikaday-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/css/pikaday.min.css" />
+
+	<!-- BASE CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+
+	<!-- YOUR CUSTOM CSS -->
+	<link href="css/custom.css" rel="stylesheet">
+
+	<style>
+		.error-message {
+			color: red;
+		}
+	</style>
+
+	<!-- MODERNIZR MENU -->
+	<script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+
+	<nav>
+		<ul class="cd-primary-nav">
+			<li><a href="https://go.baronmeddy.com/" class="animated_link">Auto insurance</a></li>
+			<li><a href="https://go.baronmeddy.com/business-insurance" class="animated_link">Business insurance</a></li>
+			<li><a href="https://go.baronmeddy.com/health-insurance" class="animated_link">Health insurance</a></li>
+			<li><a href="https://go.baronmeddy.com/homeowner-insurance" class="animated_link"> Homeowner insurance</a>
+			</li>
+			<li><a href="https://go.baronmeddy.com/life-insurance" class="animated_link">Life insurance</a></li>
+			<li><a href="https://go.baronmeddy.com/renters-insurance" class="animated_link">Renters insurance</a></li>
+		</ul>
+	</nav>
+	<!-- /menu -->
+
+	<div class="container-fluid full-height">
+		<div class="row row-height">
+			<div class="col-lg-6 content-left">
+				<div class="content-left-wrapper">
+					<a href="index.html" id="logo"><img src="img/logo.png" alt="" width="49" height="35"></a>
+					<div id="social">
+						<ul>
+							<li><a href="https://facebook.com/baronmeddyusa"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://twitter.com/baronmeddy"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://instagram.com/baronmeddy"><i class="icon-instagram"></i></a></li>
+							<li><a href="https://linkedin.com/company/baronmeddy"><i class="icon-linkedin"></i></a></li>
+						</ul>
+					</div>
+					<!-- /social -->
+					<div>
+						<figure><img src="img/auto.svg" alt="" class="img-fluid"></figure>
+						<h2>Your road to smarter auto insurance starts here!</h2>
+						<p>Compare quotes, find the perfect coverage, and hit the road with confidence. Drive smart,
+							save big – your perfect policy is just a few click away!</p>
+
+					</div>
+					<div class="copy">©2023 Baron Meddy, Inc.</div>
+				</div>
+				<!-- /content-left-wrapper -->
+			</div>
+			<!-- /content-left -->
+
+			<div class="col-lg-6 content-right" id="start">
+				<div id="wizard_container">
+					<div id="top-wizard">
+						<div id="progressbar"></div>
+					</div>
+					<!-- /top-wizard -->
+					<form id="wrapped" method="POST">
+						<input id="website" name="website" type="text" value="">
+						<!-- Leave for security protection, read docs for details -->
+						<div id="middle-wizard">
+							<div class="step">
+								<h3 class="main_question"><strong>1/12</strong>Hi there! Tell us about yourself.</h3>
+								<p>Please make sure it matches the information on your license.</p>
+								<div class="form-group">
+									<h6>First name</h6>
+									<input type="text" name="firstname" class="form-control required"
+										placeholder="eg. John">
+								</div>
+								<div class="form-group">
+									<h6>Last name</h6>
+									<input type="text" name="lastname" class="form-control required"
+										placeholder="eg. Smith">
+								</div>
+								<div class="form-group">
+									<h6>When's your birthday?</h6>
+									<input type="text" id="dob" name="dob" class="form-control required"
+										placeholder="MM/DD/YYYY">
+									<span class="error-message" id="dobError"></span>
+								</div>
+								<h6>Why we ask for this information?</h6>
+								<p>Insurance companies use your age to recommend policies.
+									Your answer will help us find more matched providers.
+									Don’t worry. Your information is confidential.</p>
+
+
+								<!-- /row -->
+								<div class="form-group terms">
+									<label class="container_check">Please accept our <a
+											href="https://www.baronmeddy.com/terms-and-conditions/"
+											data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and conditions</a>
+										<input type="checkbox" name="terms" value="Yes" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
+
+							<!-- /step-->
+							<div class="step">
+								<h3 class="main_question"><strong>2/12</strong>What is your address?</h3>
+								<div class="form-group">
+									<p>We need your address to match you with insurance providers in your area</p>
+									<h6>Enter your street address including suite or apt number</h6>
+									<input type="text" name="streetaddress" class="form-control required"
+										placeholder="eg. 123 Main St apt 1202">
+								</div>
+								<div class="form-group">
+									<h6>City</h6>
+									<input type="text" name="text" class="form-control required"
+										placeholder="e.g: New York">
+								</div>
+								<div class="form-group">
+									<h6>State</h6>
+									<div class="styled-select clearfix">
+										<select class="wide required" name="country">
+											<option value="">State</option>
+											<option value="Alabama">Alabama</option>
+											<option value="Alaska">Alaska</option>
+											<option value="Arizona">Arizona</option>
+											<option value="Arkansas">Arkansas</option>
+											<option value="California">California</option>
+											<option value="Colorado">Colorado</option>
+											<option value="Connecticut">Connecticut</option>
+											<option value="Delaware">Delaware</option>
+											<option value="District Of Columbia">District Of Columbia</option>
+											<option value="Florida">Florida</option>
+											<option value="Georgia">Georgia</option>
+											<option value="Hawaii">Hawaii</option>
+											<option value="Idaho">Idaho</option>
+											<option value="Illinois">Illinois</option>
+											<option value="Indiana">Indiana</option>
+											<option value="Iowa">Iowa</option>
+											<option value="Kansas">Kansas</option>
+											<option value="Kentucky">Kentucky</option>
+											<option value="Louisiana">Louisiana</option>
+											<option value="Maine">Maine</option>
+											<option value="Maryland">Maryland</option>
+											<option value="Massachusetts">Massachusetts</option>
+											<option value="Michigan">Michigan</option>
+											<option value="Minnesota">Minnesota</option>
+											<option value="Mississippi">Mississippi</option>
+											<option value="Missouri">Missouri</option>
+											<option value="Montana">Montana</option>
+											<option value="Nebraska">Nebraska</option>
+											<option value="Nevada">Nevada</option>
+											<option value="New Hampshire">New Hampshire</option>
+											<option value="New Jersey">New Jersey</option>
+											<option value="New Mexico">New Mexico</option>
+											<option value="New York">New York</option>
+											<option value="North Carolina">North Carolina</option>
+											<option value="North Dakota">North Dakota</option>
+											<option value="Ohio">Ohio</option>
+											<option value="Oklahoma">Oklahoma</option>
+											<option value="Oregon">Oregon</option>
+											<option value="Pennsylvania">Pennsylvania</option>
+											<option value="Rhode Island">Rhode Island</option>
+											<option value="South Carolina">South Carolina</option>
+											<option value="South Dakota">South Dakota</option>
+											<option value="Tennessee">Tennessee</option>
+											<option value="Texas">Texas</option>
+											<option value="Utah">Utah</option>
+											<option value="Vermont">Vermont</option>
+											<option value="Virginia">Virginia</option>
+											<option value="Washington">Washington</option>
+											<option value="West Virginia">West Virginia</option>
+											<option value="Wisconsin">Wisconsin</option>
+											<option value="Wyoming">Wyoming</option>
+										</select>
+									</div>
+									<p> </p>
+									<div class="form-group">
+										<h6>Zip code</h6>
+										<input type="text" name="number" class="form-control required"
+											placeholder="eg. 20500">
+									</div>
+								</div>
+							</div>
+
+							<!-- /step-->
+							<div class="step">
+								<h3 class="main_question"><strong>3/12</strong>Contact Information</h3>
+								<p>We need your contact information to send you quotes.</p>
+								<div class="form-group">
+									<h6>What's the best phone number to reach you?</h6>
+									<input type="text" name="phonenumber" class="form-control required"
+										placeholder="eg. (123) 456-7890">
+								</div>
+								<div class="form-group">
+									<h6>What's your email address?</h6>
+									<input type="text" name="email" class="form-control required"
+										placeholder="eg. name@domain.com">
+								</div>
+								<div class="form-group">
+									<h6>When is the best time to reach you?</h6>
+									<div class="styled-select clearfix">
+										<select class="wide required" name="When is the best time to reach you?">
+											<option value="">-Select an option-</option>
+											<option value="morning">Morning between 9 am - 11:30 am</option>
+											<option value="afternoon">Afternoon between 12 pm - 6 pm</option>
+											<option value="evening">Evening between 6 pm - 9 pm</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<h6>What is your preferred way of contact?</h6>
+									<div class="styled-select clearfix">
+										<select class="wide required" name="When is the best time to reach you?">
+											<option value="">-Select an option-</option>
+											<option value="email">Email</option>
+											<option value="phonecall">Phone</option>
+											<option value="both">Either or is fine</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<!-- /step-->
+
+							<!-- /step-->
+							<div class="step">
+								<h3 class="main_question"><strong>4/12</strong>Which of the following best describes
+									where you live?</h3>
+								<div class="form-group">
+									<label class="container_radio version_2">I am a home owner
+										<input type="radio" name="question_1" value="Completely Satisfied"
+											class="required" onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_radio version_2">I currently rent
+										<input type="radio" name="question_1" value="Completely Satisfied"
+											class="required" onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_radio version_2">I live with parents/relatives
+										<input type="radio" name="question_1" value="Completely Satisfied"
+											class="required" onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_radio version_2">Other
+										<input type="radio" name="question_1" value="Completely Satisfied"
+											class="required" onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
+							<!-- /step-->
+							<div class="step">
+								<h3 class="main_question"><strong>5/12</strong>What’s your main goal here today?</h3>
+								<p>This won’t impact your application at all — it just helps us get to know you better.
+								</p>
+
+								<div class="form-group">
+									<label class="container_radio version_2">I want to get insurance coverage today (or
+										soon)
+										<input type="radio" name="question_1" value="Quite Satisfied" class="required"
+											onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_radio version_2">I’m comparing Baron Meddy to other quotes
+										I’ve gotten
+										<input type="radio" name="question_1"
+											value="I’m comparing Ladder to other quotes I’ve gotten" class="required"
+											onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_radio version_2">I'm here to see my price
+										<input type="radio" name="question_1" value="Satisfied" class="required"
+											onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_radio version_2">Other
+										<input type="radio" name="question_1" value="Extremely Satisfied"
+											class="required" onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
+
+							<!-- /step-->
+							<div class="step">
+								<h3 class="main_question"><strong>6/12</strong> Thanks, now let’s add your first
+									vehicle.</h3>
+								<h6>Make</h6>
+								<div class="form-group">
+									<div class="styled-select clearfix">
+										<select class="wide required" name="Make">
+											<option value="">-Select-</option>
+											<option value="Acura">Acura</option>
+											<option value="Alfa Romeo">Alfa Romeo</option>
+											<option value="Aston Martin">Astin Martin</option>
+											<option value="Audi">Audi</option>
+											<option value="BMW">BMW</option>
+											<option value="Bentley">Bentley</option>
+											<option value="Bollinger">Bollinger</option>
+											<option value="Bugatti">Bugatti</option>
+											<option value="Buick">Buick</option>
+											<option value="Cadillac">Cadillac</option>
+											<option value="Canoo">Canoo</option>
+											<option value="Chevrolet">Chevrolet</option>
+											<option value="Chrysler">Chrysler</option>
+											<option value="Delorean">Delorean</option>
+											<option value="Dodge">Dodge</option>
+											<option value="Ferrari">Ferrari</option>
+											<option value="Fiat">Fiat</option>
+											<option value="Fisker">Fisker</option>
+											<option value="Ford">Ford</option>
+											<option value="GMC">GMC</option>
+											<option value="Genesis">Genesis</option>
+											<option value="Honda">Honda</option>
+											<option value="Hummer">Hummer</option>
+											<option value="Hyundai">Hyundai</option>
+											<option value="Ineos">Ineos</option>
+											<option value="Infiniti">Infiniti</option>
+											<option value="Jaguar">Jaguar</option>
+											<option value="Jeep">Jeep</option>
+											<option value="Karma">Karma</option>
+											<option value="Kia">Kia</option>
+											<option value="Lamborghini">Lamborghini</option>
+											<option value="Land Rover">Land Rover</option>
+											<option value="Lexus">Lexus</option>
+											<option value="Lincol">Lincoln</option>
+											<option value="Lordstown">Lordstown</option>
+											<option value="Lotus">Lotus</option>
+											<option value="Lucid Motors">Lucid Motors</option>
+											<option value="Maserati">Maserati</option>
+											<option value="Maybach">Maybach</option>
+											<option value="Mazda">Mazda</option>
+											<option value="McLaren">McLaren</option>
+											<option value="Mercedes-AMG">Mercedes-AMG</option>
+											<option value="Mercedes-Benz">Mercedes-Benz</option>
+											<option value="Mercury">Mercury</option>
+											<option value="Mini">Mini</option>
+											<option value="Mitsubishi">Mitsubishi</option>
+											<option value="Nissan">Nissan</option>
+											<option value="Oldsmobile">Oldsmobile</option>
+											<option value="Polestar">Polestar</option>
+											<option value="Pontiac">Pontiac</option>
+											<option value="Porsche">Porsche</option>
+											<option value="Plymouth">Plymouth</option>
+											<option value="Ram">Ram</option>
+											<option value="Ratis">Ratis</option>
+											<option value="Rivian">Rivian</option>
+											<option value="Plymouth">Plymouth</option>
+											<option value="Rolls-Royce">Rolls-Royce</option>
+											<option value="Saab">Saab</option>
+											<option value="Saturn">Saturn</option>
+											<option value="Scion">Scion</option>
+											<option value="Subaru">Subaru</option>
+											<option value="Suzuki">Suziki</option>
+											<option value="Tesla">Tesla</option>
+											<option value="Toyota">Toyota</option>
+											<option value="Volkswagen">Volkswagen</option>
+											<option value="VinFast">VinFast</option>
+											<option value="Volvo">Volvo</option>
+										</select>
+									</div>
+									<p> </p>
+									<h6>Model</h6>
+									<div class="form-group">
+										<input type="text" name="model" class="form-control required"
+											placeholder="eg. Altima">
+									</div>
+									<p> </p>
+									<div class="form-group">
+										<input type="number" name="year" class="form-control required"
+											placeholder="Year">
+									</div>
+									<p> </p>
+									<h3 class="main_question"><strong></strong>Do you currently have an auto insurance
+										policy?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question_1" value="Completely Satisfied"
+												class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question_1" value="Completely Satisfied"
+												class="required" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<!-- /step-->
+							<div class="step">
+								<h3 class="main_question"><strong>7/12</strong> Just a little more infromation about
+									your vehicle.</h3>
+								<h6>Does your vehicle have any safety feature?</h6>
+								<p>Select all that applies</p>
+								<div class="form-group">
+									<label class="container_check version_2">Air bag
+										<input type="checkbox" name="question_2[]" value="Google Search Engine"
+											class="required" onchange="getVals(this, 'question_2');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_check version_2">Automated parking
+										<input type="checkbox" name="question_2[]" value="Google Search Engine"
+											class="required" onchange="getVals(this, 'question_2');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_check version_2">Backup camera
+										<input type="checkbox" name="question_2[]" value="Google Search Engine"
+											class="required" onchange="getVals(this, 'question_2');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_check version_2">Blindspot warning
+										<input type="checkbox" name="question_2[]" value="Google Search Engine"
+											class="required" onchange="getVals(this, 'question_2');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_check version_2">Lane change assist
+										<input type="checkbox" name="question_2[]" value="Google Search Engine"
+											class="required" onchange="getVals(this, 'question_2');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<p> </p>
+								<div class="form-group">
+									<h6>Automobile VIN</h6>
+									<input type="text" name="vin" class="form-control required"
+										placeholder="eg. 4Y1SL65848Z411439">
+								</div>
+							</div>
+
+							<!-- /step-->
+							<div class="step">
+								<h3 class="main_question"><strong>8/12</strong> Vehicle usage</h3>
+								<h6>Primary use of the vehicle</h6>
+								<div class="styled-select clearfix">
+									<select class="wide required" name="Make">
+										<option value="">-Select-</option>
+										<option>Personal/Commuting</option>
+										<option>Pleasure</option>
+										<option>Business/rideshare</option>
+									</select>
+								</div>
+								<p> </p>
+								<h6>How many drivers will be included in this policy?</h6>
+								<div class="styled-select clearfix">
+									<select class="wide required" name="Make">
+										<option value="">-Select-</option>
+										<option>One (myself)</option>
+										<option>Two</option>
+										<option>Three</option>
+										<option>Four</option>
+										<option>Five or more</option>
+									</select>
+								</div>
+
+								<p></p>
+								<div class="form-group">
+									<h6>Estimated annual mileage per year?</h6>
+									<input type="text" name="vin" class="form-control required" placeholder="eg. 3500">
+								</div>
+							</div>
+
+							<!-- /step-->
+							<div class="step">
+								<h3 class="main_question"><strong>9/12</strong> Driving History</h3>
+								<h6>When was your license issued?</h6>
+								<p> </p>
+								<div class="form-group">
+									<input type="text" name="license" class="form-control required"
+										placeholder="eg. 09/10/2021">
+								</div>
+								<p> </p>
+								<h6>Any accidents or claims in the past three years?</h6>
+								<div class="form-group">
+									<label class="container_radio version_2">Yes
+										<input type="radio" name="question_1" value="Completely Satisfied"
+											class="required" onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_radio version_2">No
+										<input type="radio" name="question_1" value="Completely Satisfied"
+											class="required" onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label>If yes, please describe below (we know, life happens)</label>
+									<textarea name="type_your_message_below" class="form-control" style="height:100px;"
+										placeholder="Type your message here..."
+										onkeyup="getVals(this, 'additional_message');"></textarea>
+								</div>
+							</div>
+
+							<!-- /step-->
+							<div class="step">
+								<h3 class="main_question"><strong>10/12</strong>One last thing</h3>
+								<h6>What's your gender at birth?</h6>
+								<div class="form-group">
+									<label class="container_radio version_2">Male
+										<input type="radio" name="question_1" value="Completely Satisfied"
+											class="required" onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_radio version_2">Female
+										<input type="radio" name="question_1" value="Completely Satisfied"
+											class="required" onchange="getVals(this, 'question_1');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<h6>What is your marital status?</h6>
+								<div class="styled-select clearfix">
+									<select class="wide required" name="Make">
+										<option value="">-Select-</option>
+										<option>Single</option>
+										<option>Married</option>
+										<option>Separated</option>
+										<option>Married</option>
+										<option>Divorced</option>
+										<option>Widowed</option>
+									</select>
+								</div>
+								<p> </p>
+								<h6>What’s the highest
+									level of education you completed?</h6>
+								<div class="styled-select clearfix">
+									<select class="wide required" name="Make">
+										<option value="">-Select-</option>
+										<option>No degree</option>
+										<option>High school or GED</option>
+										<option>Some college</option>
+										<option>Associate's degree</option>
+										<option>Bachelor's degree</option>
+										<option>Master's degree or higher</option>
+									</select>
+								</div>
+								<p> </p>
+								<h6>What is your credit score range?</h6>
+								<div class="styled-select clearfix">
+									<select class="wide required" name="Make">
+										<option value="">-Select-</option>
+										<option>Poor (300 - 579)</option>
+										<option>Fair (580 -669)</option>
+										<option>Good (670 - 739)</option>
+										<option>Excellent (740 -799)</option>
+										<option>Exceptional (800 -850)</option>
+									</select>
+								</div>
+							</div>
+
+							<!-- /step-->
+							<div class="step">
+								<h3 class="main_question"><strong>11/12</strong> Coverage Preferences</h3>
+								<h6>What is your desired coverage?</h6>
+								<div class="styled-select clearfix">
+									<select class="wide required" name="Make">
+										<option value="">-Select-</option>
+										<option>Liability</option>
+										<option>Full coverage</option>
+										<option>Collision coverage</option>
+										<option>Comprehensive coverage</option>
+										<option>Gap insurance</option>
+										<option>Medical payments coverage</option>
+										<option>Uninsured motorist coverage</option>
+										<option>Perssonal injury protection</option>
+									</select>
+								</div>
+								<p> </p>
+								<h6>Save more with special discounts</h6>
+								<p>Select all that applies</p>
+								<div class="form-group">
+									<label class="container_check version_2">Married
+										<input type="checkbox" name="question_2[]" value="Google Search Engine"
+											class="required" onchange="getVals(this, 'question_2');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_check version_2">Clean driving record
+										<input type="checkbox" name="question_2[]" value="Google Search Engine"
+											class="required" onchange="getVals(this, 'question_2');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_check version_2">Homeowner
+										<input type="checkbox" name="question_2[]" value="Google Search Engine"
+											class="required" onchange="getVals(this, 'question_2');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_check version_2">Excellent credit
+										<input type="checkbox" name="question_2[]" value="Google Search Engine"
+											class="required" onchange="getVals(this, 'question_2');">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="container_check version_2">Active military or veteran
+										<input type="checkbox" name="question_2[]" value="Google Search Engine"
+											class="required" onchange="getVals(this, 'question_2');">
+										<span class="checkmark"></span>
+										<p> </p>
+										<p>Click <a href="https://www.baronmeddy.com/insurance/"
+												target="_blank">here</a> to learn the difference with auto insurance
+											coverage.</p>
+									</label>
+
+								</div>
+							</div>
+							<!-- /step-->
+							<div class="submit step">
+								<h3 class="main_question"><strong>12/12</strong>Let's summarize</h3>
+								<div class="summary">
+									<ul>
+										<li><strong>1</strong>
+											<h5>Personal information</h5>
+											<p id="firstname"></p>
+										</li>
+										<li><strong>2</strong>
+											<h5>Desired coverage</h5>
+											<p id="question_2"></p>
+										</li>
+										<li><strong>3</strong>
+											<h5>Do you think to suggest our company to a friend or parent?</h5>
+											<p id="question_3"></p>
+											<p id="additional_message"></p>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- /step-->
+						</div>
+						<!-- /middle-wizard -->
+						<div id="bottom-wizard">
+							<button type="button" name="backward" class="backward">Back</button>
+							<button type="button" name="forward" class="forward">Next</button>
+							<button type="submit" name="process" class="submit">Confirm</button>
+						</div>
+						<!-- /bottom-wizard -->
+					</form>
+				</div>
+				<!-- /Wizard container -->
+			</div>
+			<!-- /content-right-->
+		</div>
+		<!-- /row-->
+	</div>
+	<!-- /container-fluid -->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	<!-- /menu button -->
+
+	<!-- Modal terms and conditions-->
+
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Thank you for using our quote request form. By submitting this form, you agree to the following
+						terms and conditions:</p>
+					<strong>Accuracy of Information:</strong>
+					<p><br>Ensure all information provided in the form is accurate and complete.
+						Any false or misleading information may result in an inaccurate quote.</p>
+					<strong>Privacy and Data Security:</strong>
+					<p><br>We prioritize the security of your personal information.
+						Your data will be used solely for the purpose of generating a quote and will not be shared with
+						third parties without your consent.</p>
+					<strong>Communication Consent:</strong>
+					<p><br>By submitting this form, you agree to be contacted via the provided email or phone number for
+						the purpose of discussing the quote.</p>
+					<strong>No Obligation to Purchase:</strong>
+					<p><br> Submitting a quote request does not obligate you to purchase any product or service.</p>
+					<strong>Quote Validity:</strong>
+					<p><br>Quotes provided are valid for a specified period; please review the quote details for the
+						expiration date.</p>
+					<strong>Policy Terms and Conditions:</strong>
+					<p><br>The final terms and conditions of any insurance policy are subject to the specific terms
+						outlined by the insurance provider.</p>
+					<strong>Changes and Updates:</strong>
+					<p><br>We reserve the right to update these terms and conditions at any time. Please review them
+						periodically.</p>
+					<strong>Disclaimers:</strong>
+					<p><br>We are not responsible for any errors or omissions in the quote provided.
+						The availability of products and services is subject to change without notice.</p>
+					<strong>Governing Law:</strong>
+					<p><br> These terms and conditions are governed by the laws of New York.
+
+						By submitting the quote request form, you acknowledge that you have read, understood, and agreed
+						to these terms and conditions. If you do not agree, please do not proceed with the form
+						submission.</p>
+					<p>Visit our <a href="https://www.baronmeddy.com/privacy/" target="_blank">privacy policy</a> to
+						learn how we handle your personal information.</p>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- COMMON SCRIPTS -->
+	<script src="js/jquery-3.6.3.min.js"></script>
+	<script src="js/common_scripts.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/functions.js"></script>
+
+	<!-- Wizard script -->
+	<script src="js/survey_func.js"></script>
+
+	<!-- Include jQuery and inputmask library from CDN -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+	<!--date picker using pikabay-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
+
+	<!-- form validator-->
+	<script src="js/formvalidate.js"></script>
+
+
+</body>
+
+</html>

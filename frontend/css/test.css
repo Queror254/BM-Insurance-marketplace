@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.spacer {
+    margin-bottom: 5px;
+    margin: 0;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 70px;
+    width: 1050px;
+    background-color: #FFFFFF
+}
+
+.logo_title {
+    display: block;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--blue-color);
+
+    /**/
+    /* Layout Properties */
+    top: 24px;
+    left: 26px;
+    width: 275px;
+    height: 62px;
+    opacity: 1;
+
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: #353232;
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.sidebar img {
+    top: 24px;
+    left: 26px;
+    width: 275px;
+    height: 62px;
+}
+
+.filter-heading {
+    margin-bottom: 10px;
+}
+
+/* filter styles */
+.filter-card {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: auto;
+}
+
+.filter-option {
+    margin-right: 10px;
+}
+
+.search-input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Chart Styles */
+.chart-container {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #F7F7FB 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .chart-container,
+    .main-content {
+        width: 100%;
+    }
+}

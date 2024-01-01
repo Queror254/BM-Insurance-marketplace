@@ -1,0 +1,41 @@
+[24-Dec-2023 04:10:31 America/New_York] PHP Warning:  Undefined array key "email" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 38
+[24-Dec-2023 04:10:31 America/New_York] PHP Warning:  Undefined array key "email" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 45
+[24-Dec-2023 04:10:31 America/New_York] PHP Warning:  Undefined array key "age" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 47
+[24-Dec-2023 04:10:31 America/New_York] PHP Warning:  Undefined array key "gender" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 48
+[25-Dec-2023 00:28:00 America/New_York] PHP Warning:  Undefined array key "email" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 38
+[25-Dec-2023 00:28:00 America/New_York] PHP Warning:  Undefined array key "email" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 45
+[25-Dec-2023 00:28:00 America/New_York] PHP Warning:  Undefined array key "age" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 47
+[25-Dec-2023 00:28:00 America/New_York] PHP Warning:  Undefined array key "gender" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 48
+[25-Dec-2023 10:41:03 America/New_York] PHP Warning:  Undefined array key "email" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 38
+[25-Dec-2023 10:41:03 America/New_York] PHP Warning:  Undefined array key "email" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 45
+[25-Dec-2023 10:41:03 America/New_York] PHP Warning:  Undefined array key "age" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 47
+[25-Dec-2023 10:41:03 America/New_York] PHP Warning:  Undefined array key "gender" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 48
+[25-Dec-2023 10:41:03 America/New_York] PHP Warning:  Undefined array key "question_1" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 51
+[25-Dec-2023 10:41:03 America/New_York] PHP Warning:  Undefined array key "question_2" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 54
+[25-Dec-2023 10:41:03 America/New_York] PHP Warning:  foreach() argument must be of type array|object, null given in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 54
+[25-Dec-2023 10:41:03 America/New_York] PHP Warning:  Undefined array key "question_3" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 59
+[25-Dec-2023 10:43:39 America/New_York] PHP Warning:  Undefined array key "email" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 38
+[25-Dec-2023 10:43:39 America/New_York] PHP Warning:  Undefined array key "email" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 45
+[25-Dec-2023 10:43:39 America/New_York] PHP Warning:  Undefined array key "age" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 47
+[25-Dec-2023 10:43:39 America/New_York] PHP Warning:  Undefined array key "gender" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 48
+[25-Dec-2023 10:43:39 America/New_York] PHP Warning:  Undefined array key "question_1" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 51
+[25-Dec-2023 10:43:39 America/New_York] PHP Warning:  Undefined array key "question_2" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 54
+[25-Dec-2023 10:43:39 America/New_York] PHP Warning:  foreach() argument must be of type array|object, null given in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 54
+[25-Dec-2023 10:43:39 America/New_York] PHP Warning:  Undefined array key "question_3" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 59
+[25-Dec-2023 10:46:26 America/New_York] PHP Warning:  Undefined array key "email" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 38
+[25-Dec-2023 10:46:26 America/New_York] PHP Warning:  Undefined array key "email" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 45
+[25-Dec-2023 10:46:26 America/New_York] PHP Warning:  Undefined array key "age" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 47
+[25-Dec-2023 10:46:26 America/New_York] PHP Warning:  Undefined array key "gender" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 48
+[25-Dec-2023 10:46:26 America/New_York] PHP Warning:  Undefined array key "question_1" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 51
+[25-Dec-2023 10:46:26 America/New_York] PHP Warning:  Undefined array key "question_2" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 54
+[25-Dec-2023 10:46:26 America/New_York] PHP Warning:  foreach() argument must be of type array|object, null given in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 54
+[25-Dec-2023 10:46:26 America/New_York] PHP Warning:  Undefined array key "question_3" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 59
+[27-Dec-2023 17:47:23 America/New_York] PHP Warning:  Undefined array key "age" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 47
+[27-Dec-2023 17:47:23 America/New_York] PHP Warning:  Undefined array key "gender" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 48
+[27-Dec-2023 17:47:23 America/New_York] PHP Warning:  Undefined array key "question_3" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 59
+[29-Dec-2023 15:40:46 America/New_York] PHP Warning:  Undefined array key "age" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 47
+[29-Dec-2023 15:40:46 America/New_York] PHP Warning:  Undefined array key "gender" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 48
+[29-Dec-2023 15:40:46 America/New_York] PHP Warning:  Undefined array key "question_3" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 59
+[29-Dec-2023 16:24:27 America/New_York] PHP Warning:  Undefined array key "age" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 47
+[29-Dec-2023 16:24:27 America/New_York] PHP Warning:  Undefined array key "gender" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 48
+[29-Dec-2023 16:24:27 America/New_York] PHP Warning:  Undefined array key "question_3" in /home/qsnaijoo/go.baronmeddy.com/survey.php on line 59
