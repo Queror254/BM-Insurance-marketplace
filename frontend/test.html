@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Result Page</title>
+    <title>Result-Insurance Marketplace</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <!-- Your custom CSS -->
     <link rel="stylesheet" href="css/test.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -24,84 +29,833 @@
                     <img src="img/BMlogo.png" alt="">
                 </div>
 
-                <!-- Chart Container -->
-                <div class="chart-container">
-                    <h2>Chart Container</h2>
-                    <!-- Add your chart component or content here -->
-                    <p>This is where your chart will be displayed.</p>
-                </div>
+                <div class="filter-section mt-20">
 
-                <div class="filter-section">
-                    <h3 class="filter-heading">Filters</h3>
+                    <h3 class="filter-heading mt-10">Filter plans</h3>
+                    <hr>
+                    <!-- Chart Container -->
+                    <div class="chat-container">
+
+                        <label class="filter-type" for="filter">Deductible</label>
+
+                        <canvas id="priceChart" width="400" height="200"></canvas>
+                        <input type="range" id="priceSlider" min="0" value="0">
+
+                        <div class="space"></div>
+
+                        <!-- Price Range Filter -->
+                        <div class="price-range-filter d-flex mb-10 ">
+                            <div class="mr-2">
+                                <div class="custom-input-container">
+                                    <label class="filter" for="minPrice">MINIUMUM
+                                        PRICE</label>
+                                    <input type="number" id="minPrice" class="form-control" value="$"
+                                        placeholder="$0.00">
+                                </div>
+                            </div>
+                            <div class="mr-2">
+                                <hr />
+                            </div>
+                            <div>
+                                <div class="custom-input-container">
+                                    <label class="filter" for="maxPrice">MAXIMUM
+                                        PRICE</label>
+                                    <input type="number" id="maxPrice" class="form-control" placeholder="$0.00">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="space"></div>
+
+
                     <!-- Add your filter options here -->
-                    <label for="filter1">Filter 1:</label>
-                    <select id="filter1" class="form-control">
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                    </select>
+                    <label class="filter-type" for="filter">Plan type</label>
+                    <div class="options ">
+                        <input class="option1-check" type="checkbox" id="liabilityCheckbox" value="liability">
+                        <label class="option1" for="liabilityCheckbox">Liability
+                        </label>
+                    </div>
 
-                    <label for="filter2">Filter 2:</label>
-                    <select id="filter2" class="form-control">
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                    </select>
+                    <div class="options ">
+                        <input class="option2-check" type="checkbox" id="fullcoverageCheckbox" value="Full coverage">
+                        <label class="option2" for="fullcoverageCheckbox">Full coverage
+                        </label>
+                    </div>
+
+
+                    <label class="filter-type" for="filter">Discount</label>
+                    <div class="options ">
+                        <input class="option1-check" type="checkbox" id="Married" value="Married">
+                        <label class="option1" for="Married">Married
+                        </label>
+                    </div>
+                    <div class="options ">
+                        <input class="option2-check" type="checkbox" id="cleanRecord" value="cleanRecord">
+                        <label class="option2" for="cleanRecord">Clean record
+                        </label>
+                    </div>
+                    <div class="options ">
+                        <input class="option3-check" type="checkbox" id="ownaHome" value="ownaHome">
+                        <label class="option3" for="ownaHome">Own a home
+                        </label>
+                    </div>
+                    <div class="options ">
+                        <input class="option4-check" type="checkbox" id="veteranOrActiveMilitary"
+                            value="veteranOrActiveMilitary">
+                        <label class="option4" for="veteranOrActiveMilitary">Veteran or active military
+                        </label>
+                    </div>
+
+                    <div class="options mb-10 ">
+                        <input class="option5-check" type="checkbox" id="excellentCreditScore"
+                            value="excellentCreditScore">
+                        <label class="option5" for="excellentCreditScore">Excellent credit score
+                        </label>
+                    </div>
+
                 </div>
             </div>
 
             <!-- Main Content -->
             <div class="col-md-9 main-content">
                 <div class="spacer"></div>
+                <div class="s-content">
 
-                <div class="filter-card mt-4">
-                    <div class="filter-option">
-                        <label for="insuranceType">Insurance Type:</label>
-                        <select id="insuranceType" class="form-control">
-                            <option value="health">Health</option>
-                            <option value="auto">Auto</option>
-                            <!-- Add more options as needed -->
-                        </select>
+                    <!--filteri-card start-->
+                    <div class="filter-card mt-4">
+                        <div class="filter-option mt-2">
+                            <div class="custom-select-container">
+                                <label for="insuranceType">INSURANCE TYPE:</label>
+                                <select id="insuranceType" class="form-control">
+                                    <option value="health">Health Insurance</option>
+                                    <option value="auto">Auto Insurance</option>
+                                    <option value="business">Business Insurance</option>
+                                    <option value="life">Life Insurance</option>
+                                    <option value="homeowner">Auto Insurance</option>
+                                    <option value="renter">Renters Insurance</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="filter-option">
+                            <div class="custom-select-container ml-1">
+                                <label for="age">AGE:</label>
+                                <select id="age" class="form-control">
+                                    <option value="18to25">18-25</option>
+                                    <option value="26to40">26-40</option>
+                                    <option value="40to60">40-60</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="filter-option">
+                            <div class="custom-select-container">
+                                <label for="zipcode">ZIPCODE:</label>
+                                <select id="zipcode" class="form-control" placeholder="10005">
+                                    <option value="zip">10343</option>
+                                    <option value="zip">23434</option>
+                                    <option value="zip">90848</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="search-option mt-3">
+                            <button type="submit" class="search-btn">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+
+                        <div class="sort-filter">
+                            <label for="sortByPrice">
+                                Sort by Price:
+
+                            </label>
+                            <select id="sortByPrice" class="form-control">
+                                <option value="lowToHigh">Low to High</option>
+                                <option value="highToLow">High to Low</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+
                     </div>
+                    <!--end-->
 
-                    <div class="filter-option">
-                        <label for="age">Age:</label>
-                        <select id="age" class="form-control">
-                            <option value="under18">Under 18</option>
-                            <option value="18to25">18-25</option>
-                            <option value="26to40">26-40</option>
-                            <!-- Add more options as needed -->
-                        </select>
+
+                    <!--Result-container-start-->
+                    <div class="result-container">
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
+                        <!-- result card block -->
+                        <div class="result-card">
+                            <div class="details">
+                                <img src="img/State-Farm-Logo.png" alt="Company Logo" class="logo">
+                                <div class="value">State Farm</div>
+                                <div class="label">Carrier</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Full Coverage</div>
+                                <div class="label">Coverage</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">1</div>
+                                <div class="label">Drivers</div>
+                            </div>
+
+                            <div class="details">
+                                <div class="resultcardspacer"></div>
+                                <div class="value">Monthly</div>
+                                <div class="label">Payment</div>
+                            </div>
+
+                            <div class="money-details">
+                                <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                                        style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+                                </div>
+                                <a href="details_page.html" class="view-details">View Details</a>
+                            </div>
+
+                            <div class="details">
+                                <!--vertical-line-->
+                                <div class="vertical-line"></div>
+                                <button class="add-to-cart-button">
+                                    <span class="button-text">ADD TO CART</span>
+                                    <div class="icon-container">
+                                        <i class="icon fas fa-plus"></i>
+                                    </div>
+                                </button>
+
+                                <div class="options ">
+                                    <input class="option1-check" type="checkbox" id="Married" value="Married">
+                                    <label class="option1" for="Compare">Compare to other plans
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="horizontal-line"></div>
+
+                        </div>
+                        <!-- End of result card block -->
+
                     </div>
-
-                    <div class="filter-option">
-                        <label for="zipcode">Zipcode:</label>
-                        <input type="text" id="zipcode" class="form-control" placeholder="Enter Zipcode">
-                    </div>
-
-                    <div class="search-option mt-3">
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fa fa-search"></i> Search
-                        </button>
-                    </div>
-
-                    <div class="filter-option">
-                        <label for="sortByPrice">Sort by Price:</label>
-                        <select id="sortByPrice" class="form-control">
-                            <option value="lowToHigh">Low to High</option>
-                            <option value="highToLow">High to Low</option>
-                            <!-- Add more options as needed -->
-                        </select>
-                    </div>
-
                 </div>
+                <!--end-->
+
+
+
+
                 <!--search result section-->
             </div>
         </div>
+    </div>
     </div>
 
     <!-- Bootstrap JS (optional, for certain features) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--Price range graph scripts-->
+    <script src="js/test.js"></script>
 
 </body>
 
