@@ -54,7 +54,6 @@
 		});
 	});
 
-	//pikaday date picker :
 
 	// Date picker single
 	$('input.date-pick-single').daterangepicker({
