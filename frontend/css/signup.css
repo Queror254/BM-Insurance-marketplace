@@ -1,0 +1,115 @@
+/*normal css*/
+body {
+    font-family: DM Sans, sans-serif !important;
+}
+
+h2 {
+    padding-top: 30px;
+}
+
+.row .cl-1 {
+    background-color: #eaf6ff;
+}
+
+.col-lg-6 {
+    box-sizing: border-box;
+}
+
+.describe {
+    font-size: 1.3rem !important;
+    display: block;
+}
+
+.title {
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+}
+
+.logo {
+    padding-top: 2rem;
+    width: 230px;
+}
+
+.content {
+    padding-left: 2rem;
+}
+
+/**/
+
+/*customer-reviews-curosel */
+.yorum {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.card {
+    display: block;
+    box-shadow: 0 0 3px #0000001a;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding-top: 15px;
+    width: 55%;
+    height: 30%;
+    left: 125px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+.owl-item {
+    padding: 10px;
+}
+
+
+.card-yazı p {
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+}
+
+.card-yazı {
+    background-image: linear-gradient(135deg, rgb(255, 255, 255) 10%, rgb(255, 255, 255) 100%);
+    position: relative;
+    display: flex;
+
+    /*align-items: center;*/
+}
+
+.favicon {
+    width: 100%;
+    height: auto;
+}
+
+.favicon img {
+    height: 90px;
+    width: 90px !important;
+    position: absolute;
+    bottom: -45px;
+    left: 39%;
+    border-radius: 100px;
+    border: 8px solid white;
+}
+
+
+
+.puan img {
+    height: 20px;
+    width: 20px !important;
+    margin: 5px 5px 0 0;
+}
+
+.isim h1 {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.isim p {
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+/*custormer-reviews-end*/

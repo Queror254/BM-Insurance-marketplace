@@ -40,6 +40,27 @@ canvas {
 
 /**/
 
+/* main filter styles */
+.filter-card {
+    position: relative;
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.filter-option {
+    margin-right: 18px;
+}
+
 
 
 /* filter card / select/ lable */
@@ -47,6 +68,20 @@ canvas {
     position: relative;
     display: inline-block;
     margin-right: 1px;
+}
+
+.filter-option .custom-input-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.filter-option input {
+    width: 70%;
+}
+
+#age {
+    margin-right: 18px;
 }
 
 select {
@@ -65,6 +100,7 @@ select {
     background-color: #fff;
 }
 
+
 .custom-input-container {
     position: relative;
     display: inline-block;
@@ -72,7 +108,7 @@ select {
 
 .custom-input-container input {
     padding: 10px;
-    height: 50px;
+    height: 40px;
 }
 
 .custom-input-container label {
@@ -129,6 +165,7 @@ select {
     /*for firefox*/
     -ms-overflow-style: none;
     /*for edge browser*/
+    margin-left: 40px;
 }
 
 /*Hide scrollbar for webkit browsers(chrome, safari)*/
@@ -139,7 +176,7 @@ select {
 .result-card {
     position: relative;
     display: flex;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -158,8 +195,8 @@ select {
 .horizontal-line {
     position: absolute;
     left: 0;
-    top: 75px;
-    width: 72.9%;
+    top: 82px;
+    width: 73.8%;
     height: 1px;
     border: none;
     background-color: #ccc;
@@ -304,7 +341,7 @@ select {
     opacity: 1;
     margin-top: 0px;
     margin-bottom: 12px;
-    margin-right: 240px;
+    margin-right: 230px;
 }
 
 .spacer {
@@ -348,7 +385,7 @@ select {
     background: #ffffff 0% 0% no-repeat padding-box;
     opacity: 1;
     color: #353232;
-    padding: 20px;
+    padding: 30px;
     width: 290px;
     max-width: 300px;
     min-width: 190px;
@@ -381,25 +418,6 @@ select {
     margin-top: 120px;
 }
 
-/* main filter styles */
-.filter-card {
-    position: relative;
-    margin-top: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin: auto;
-    margin-bottom: 30px;
-}
-
-.filter-option {
-    margin-right: 2px;
-}
 
 .options label {
     text-align: left;

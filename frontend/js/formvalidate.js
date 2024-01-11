@@ -1,7 +1,7 @@
 console.log("Script loaded!");
 //function to use google maps api ir other apis to collect user address and autofill the corresponding input fields
 // using google maps api auto complete //
-/*
+
 $(document).ready(function () {
     document.addEventListener('DOMContentLoaded', function () {
         const streetAddressInput = document.getElementById('streetaddress');
@@ -33,14 +33,14 @@ $(document).ready(function () {
         });
     });
 
-}); */
+});
 ///
 
 
 
 // function to validate the date of birth input
 
-/* $(document).ready(function () {
+$(document).ready(function () {
     console.log("Document ready!");
 
     const dobInput = document.getElementById('dob');
@@ -95,7 +95,7 @@ $(document).ready(function () {
         picker.show();
     });
 
-}); */
+});
 
 
 //Function to enforce usa phone numbers only rule
@@ -121,7 +121,11 @@ $(document).ready(function () {
             phoneError.textContent = 'Please enter a valid USA phone number.';
             console.log("You must be a us citizen.")
             //clear phonenumber input
-            phoneNumberInput.value = ''; // Clear the input if not valid
+            phoneNumberInput.value = '';
+        }
+        else {
+            //clear error
+            phoneError.textContent = '';
         }
     });
 });
