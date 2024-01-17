@@ -17,9 +17,11 @@
     <div class="container-xxl">
         <div class="row">
             <div class="cl-1 col-lg-6">
+                <div class="logo">
+                    <img src="img/BMlogo.png" alt="">
+                </div>
                 <div class="content">
-                    <h2>BaronMeddy</h2>
-                    <h3 class="title"><b>Create an account with Baron Meddy</b></h3>
+                    <h1 class="title"><b>Create an account with Baron Meddy</b></h1>
                     <p class="describe">
                         Sign up to gain full access to our products and services.<br>
                         Answer a couple of questions to get started.<br>
@@ -35,33 +37,133 @@
                                     sets them apart in the industry.<br>
                                 </p>
                             </div>
-                            <div class="puan d-flex justify-content-center">
-                                <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
-                                <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
-                                <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
-                                <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
-                                <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                            <div class="puan d-flex mb-4">
+                                <div class="d-flex justify-content-left ml-2 mr-4">
+                                    <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                                    <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                                    <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                                    <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                                    <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                                </div>
+                                <div class="isim d-flex mr-4">
+                                    <h1 class="justify-content-center mr-1">Victor M.-</h1>
+                                    <p class=" justify-content-left"><i>Developer</i></p>
+                                </div>
                             </div>
-                            <div class="isim text-center">
-                                <h1>Lorem Ipsum</h1>
-                                <p><i>Developer</i></p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="cl-2 col-lg-6">
-                <div class="row">
-                    <h6>Already have an account?</h6>
-                </div>
+                <div class="text-block">
+                    <div class="text-right">
+                        <a href="#">
+                            <span style="color:black;">Already have an account?</span>
+                            <span class="clr-blue">Sign In</span>
+                        </a>
+                    </div>
+                    <!--two step UserAccountSetup form-->
+                    <form id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data"
+                        method="POST">
+                        <!--Form step1-->
+                        <section id="step-1" class="form-step">
+                            <div class="cl-form">
+                                <h3 class="form-hd">Let's get you set up</h3>
+                                <div class="form-optns1">
+                                    <label class="form-lbl" for="firstName">First Name</label>
+                                    <input type="text" class="input0" id="firstName" name="firstName"
+                                        placeholder="Please enter first name" required>
+                                </div>
+                                <div class="form-optns">
+                                    <label class="form-lbl" for="lastName">Last Name</label>
+                                    <input type="text" class="input0" id="lastName" name="lastName"
+                                        placeholder="Please enter last name" required>
+                                </div>
 
-                <h3>Let's get you set up</h3>
+                                <div class="email">
+                                    <label class="form-lbl" for="email">Email</label>
+                                    <input type="email" class="input1" id="email" name="email"
+                                        placeholder="Please enter email" required>
+                                </div>
+
+                                <div class="form-optns3">
+                                    <label class="form-lbl" for="password">Password</label>
+                                    <input type="password" class="input0" id="password" name="password"
+                                        placeholder="Please enter password" required>
+                                </div>
+
+                                <div class="form-optns4">
+                                    <label class="form-lbl" for="confirmPassword">Confirm Password</label>
+                                    <input type="password" class="input0" id="confirmPassword" name="confirmPassword"
+                                        placeholder="Please re-enter password" required>
+                                </div>
+                            </div>
+                            <div class="row radio-cls">
+                                <input type="radio" class="radio-input" id="seller" name="user_type" value="seller"
+                                    required>
+                                <label class="sb-radio">Seller</label>
+
+                                <input type="radio" class="radio-input" id="buyer" name="user_type" value="buyer"
+                                    required>
+                                <label class="sb-radio">Buyer</label>
+                            </div>
+
+                            <button class="button btn-navigate-form-step mt-4" type="submit"
+                                step_number="2">Continue</button>
+                        </section>
+
+                        <!--Form step 2-->
+                        <section id="step-2" class="form-step d-none">
+                            <div class="cl-form">
+                                <h3 class="form-hd">Where are you located</h3>
+                                <h4 class="form-hd-2">What is your home Address?</h4>
+                                <div class="form-optns1">
+                                    <label class="form-lbl" for="streetAddress">Street Address</label>
+                                    <input type="text" class="input0" id="streetAddress" name="streetAddress"
+                                        placeholder="e.g 123 Main Street" required>
+                                </div>
+                                <div class="form-optns">
+                                    <label class="form-lbl" for="aptNumber">Suit/Apt number</label>
+                                    <input type="text" class="input0" id="aptNumber" name="aptNumber"
+                                        placeholder="e.g #1200" required>
+                                </div>
+
+                                <div class="form-optns3">
+                                    <label class="form-lbl" for="city">City</label>
+                                    <input type="password" class="input0" id="city" name="city"
+                                        placeholder="Please enter city" required>
+                                </div>
+
+                                <div class="form-optns-dd">
+                                    <label class="form-lbl" for="state">State</label>
+                                    <input type="password" class="inputdd" id="state" name="state"
+                                        placeholder="Enter State" required>
+                                </div>
+
+                                <div class="form-optns-dd2">
+                                    <label class="form-lbl" for="zipcode">Zip Code</label>
+                                    <input type="password" class="inputdd2" id="zipcode" name="zipcode"
+                                        placeholder="Enter Zip Code" required>
+                                </div>
+                            </div>
+                            <div class="stepper-btns mt-4">
+                                <button class="button btn-navigate-form-step mr-4" type="button"
+                                    step_number="1">Previous</button>
+                                <button class="button submit-btn" type="submit">Submit</button>
+                            </div>
+                </div>
+                </section>
+                </form>
+                </divs>
             </div>
         </div>
     </div>
 
-    <script src="#" async defer></script>
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/signup.js" async defer></script>
 </body>
 
 </html>

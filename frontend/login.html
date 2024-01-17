@@ -7,24 +7,56 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="#"> -->
-
+    <link rel="stylesheet" href="css/login.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
 </head>
 
-<body>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row mt-3">
-                <div class="col">
-                    <h1>Baron meddy</h1>
+<body class="container-fluid">
+    <div class="container-xxl">
+        <div class="container-fluid">
+            <div class="row top-rw  texi-right">
+                <div class="logo">
+                    <img src="img/BMlogo.png" alt="">
                 </div>
-
-                <div class="col">
-                    <h1>hey man</h1>
+                <div class="sgnup_lnk">
+                    <h6 class=" mt-4">New to Baron Meddy? <a href=" #" alt="">Sign Up</a>
+                    </h6>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-4.5 center-col">
+                <h3 class="form-hd">Welcome Back!</h3>
+                <h6 class="mb-4">Signin to your Baron Meddy account</h6>
+
+                <form action="#" method="post" id="loginForm">
+                    <label class="form-lbl" for="email">Email</label>
+                    <input type="text" class="input0" id="email" name="email" placeholder="Please enter Email" required>
+
+                    <label class="form-lbl" for="password">Password</label>
+                    <input type="password" class="input0" id="password" name="password"
+                        placeholder="Please enter Password" required>
+                    <div class="remforgt-ctnr">
+                        <div class="rememember">
+                            <input type="checkbox" id="remememberMe" name="remememberMe" required>
+                            <label for="remememberMe">Remember this account</label>
+                        </div>
+                        <div class="forgt-pass">
+                            <h6>Forgot password? <a href="#">Reset</a> </h6>
+                        </div>
+                    </div>
+
+                    <button type="submit">Login</button>
+                </form>
+
+                <div class="footer">
+                    @2024 Baron Meddy Inc. <a href="">Privacy Policy</a> | <a href="">Terms and Conditions</a>
+                </div>
+            </div>
+            <div class="col"></div>
         </div>
 
     </div>

@@ -10,6 +10,7 @@
   "compilerOptions": {
     "outDir": "build",
     "rootDir": "./",
+    "baseUrl": "./",
     "sourceMap": true,
     "paths": {
       "App/*": [
@@ -28,7 +29,12 @@
     "types": [
       "@adonisjs/core",
       "@adonisjs/repl",
-      "@japa/preset-adonis/build/adonis-typings"
+      "@adonisjs/session",
+      "@adonisjs/view",
+      "@adonisjs/shield",
+      "@japa/preset-adonis/build/adonis-typings",
+      "@adonisjs/lucid",
+      "@adonisjs/auth"
     ]
   }
 }

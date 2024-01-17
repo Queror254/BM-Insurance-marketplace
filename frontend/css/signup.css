@@ -1,14 +1,45 @@
 /*normal css*/
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: DM Sans, sans-serif !important;
+    /*overflow: hidden;*/
 }
 
 h2 {
     padding-top: 30px;
 }
 
+.text-right {
+    text-align: right;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+}
+
+.clr-blue {
+    color: #0766ff !important;
+}
+
 .row .cl-1 {
+    min-width: 400px;
+    padding-left: 2rem;
     background-color: #eaf6ff;
+}
+
+.row .cl-2 {
+    min-width: 400px;
+    padding-left: 2rem;
+}
+
+.text-block {
+    margin-top: 64px;
+    padding-right: 5rem;
 }
 
 .col-lg-6 {
@@ -23,16 +54,202 @@ h2 {
 .title {
     padding-top: 5rem;
     padding-bottom: 1.5rem;
+    font-size: 2.2rem;
 }
 
 .logo {
     padding-top: 2rem;
-    width: 230px;
+    padding-left: 2rem;
+    width: 50%;
 }
 
 .content {
     padding-left: 2rem;
+    padding-bottom: 6rem;
 }
+
+/**/
+
+/*signup-form css*/
+#step-2 {
+    /**/
+}
+
+form {
+    border: none;
+    padding: 20px;
+}
+
+.cl-form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cl-form .input0 {
+    width: 120%;
+    padding: 15px;
+    margin-bottom: 16px;
+}
+
+.form-optns {
+    padding-top: 40px;
+    padding-left: 30px;
+}
+
+.form-optns1 {
+    padding-top: 40px;
+    padding-right: 30px;
+}
+
+.email {
+    padding-right: 150px;
+}
+
+.email input {
+    width: 252%;
+    padding: 15px;
+}
+
+.form-optns3 {
+    padding-top: 10px;
+    padding-right: 30px;
+}
+
+.form-optns4 {
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+.form-optns-dd {
+    padding-top: 10px;
+    padding-left: 30px;
+    width: 135px;
+}
+
+.form-optns-dd2 {
+    padding-top: 10px;
+    padding-left: 40px;
+    width: 135px;
+}
+
+.form-hd {
+    margin: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 2.125rem;
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+    padding-left: 0.1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 2rem;
+}
+
+.form-hd-2 {
+    margin: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+    padding-left: 0.1rem;
+    padding-bottom: 0;
+    padding-top: 2rem;
+}
+
+.form-lbl {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input1 {
+    width: 120%;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.inputdd {
+    width: 130%;
+    padding: 15px;
+    margin-bottom: 16px;
+}
+
+.inputdd2 {
+    width: 130%;
+    padding: 15px;
+    margin-bottom: 16px;
+}
+
+.radio-cls {
+    padding-left: 15px;
+}
+
+.radio-cls .radio-input {
+    margin-right: 6px;
+    width: 18px;
+}
+
+.sb-radio {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938;
+    margin-bottom: 0px;
+    padding-right: 18px;
+
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #2b66ff !important;
+    color: #fff;
+    width: 150px;
+    min-width: 64px;
+    padding: 10px 15px;
+    border: 1px solid #4361ee;
+    border-radius: 5px;
+    border-color: #2b66ff;
+    cursor: pointer;
+    float: right;
+    right: 0;
+    margin-left: 300px;
+}
+
+.stepper-btns button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #2b66ff !important;
+    color: #fff;
+    width: 150px;
+    min-width: 64px;
+    padding: 10px 15px;
+    border: 1px solid #4361ee;
+    border-radius: 5px;
+    border-color: #2b66ff;
+    cursor: pointer;
+}
+
+.stepper-btns {
+    width: 100%;
+}
+
+.stepper-btns .btn-navigate-form-step {
+    float: left;
+
+}
+
+.stepper-btns .submit-btn {
+    float: right;
+}
+
+/*.submt-btn {
+    display: flex;
+    justify-items: right;
+}*/
 
 /**/
 
@@ -43,6 +260,12 @@ h2 {
     align-items: center;
 }
 
+.owl-carousel {
+    padding-bottom: 5rem;
+    border-radius: 30px;
+    min-width: 100%;
+}
+
 .card {
     display: block;
     box-shadow: 0 0 3px #0000001a;
@@ -50,10 +273,10 @@ h2 {
     font-weight: 500;
     padding-top: 15px;
     width: 55%;
-    height: 30%;
+    min-width: 55%;
+    height: 20%;
     left: 125px;
-    border-radius: 20px;
-    margin-bottom: 100px;
+
 }
 
 .owl-item {
@@ -95,14 +318,17 @@ h2 {
 .puan img {
     height: 20px;
     width: 20px !important;
-    margin: 5px 5px 0 0;
+}
+
+.isim {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .isim h1 {
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    margin-top: 20px;
 }
 
 .isim p {
@@ -113,3 +339,45 @@ h2 {
 }
 
 /*custormer-reviews-end*/
+
+/* Mobile-First Approach */
+@media (max-width: 768px) {
+
+    .cl-1 {
+        display: none;
+    }
+
+    form input {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .email {
+        padding-right: 0px;
+        padding-top: 20px;
+    }
+
+    .email input {
+        width: 100%;
+    }
+
+    .form-optns {
+        padding-top: 20px;
+        padding-left: 0px;
+    }
+
+    .form-optns1 {
+        padding-top: 20px;
+        padding-right: 0px;
+    }
+
+    .form-optns3 {
+        padding-top: 20px;
+        padding-right: 0px;
+    }
+
+    .form-optns4 {
+        padding-top: 20px;
+        padding-left: 0px;
+    }
+}

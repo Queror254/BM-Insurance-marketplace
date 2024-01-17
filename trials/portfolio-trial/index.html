@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="#">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <style>
+        @-webkit-keyframes spin {
+            from {
+                -webkit-transform: rotateY(0);
+            }
+
+            to {
+                -webkit-transform: rotateY(-360deg);
+            }
+        }
+
+        .wrapper {
+            margin: 0px auto 0 auto;
+
+            -webkit-perspective: 800;
+            -webkit-perspective-origin: 50% 90px;
+            -webkit-transition: -webkit-perspective, 5s;
+        }
+
+        .shape {
+            margin: 150px auto;
+            height: 200px;
+            width: 200px;
+            -webkit-transform-style: preserve-3d;
+            -webkit-animation: spin 15s infinite linear;
+
+        }
+
+        .wrapper:hover {
+            -webkit-perspective-origin: 50% -100px;
+        }
+
+        .plane {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-size: 10em;
+            text-align: center;
+        }
+
+        .plane p {
+            display: none;
+            color: #fff;
+            background: #333;
+            font-size: 0.2em;
+            padding: 10px;
+
+
+
+        }
+
+        .plane:hover p {
+            display: inline;
+        }
+
+        .p1 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_mtjz4JMGsv0vQ8kw0U_yVRQ9aUeQjl6pAts5KbgZZEsjrhQQ");
+
+            -webkit-transform: translateZ(250px);
+        }
+
+        .p1:hover {}
+
+        .p2 {
+            -webkit-transform: rotateY(45deg) translateZ(250px);
+        }
+
+        .p3 {
+            -webkit-transform: rotateY(90deg) translateZ(250px);
+        }
+
+        .p4 {
+            -webkit-transform: rotateY(135deg) translateZ(250px);
+        }
+
+        .p5 {
+            -webkit-transform: rotateY(180deg) translateZ(250px);
+        }
+
+        .p6 {
+            -webkit-transform: rotateY(225deg) translateZ(250px);
+        }
+
+        .p7 {
+            -webkit-transform: rotateY(270deg) translateZ(250px);
+        }
+
+        .p8 {
+            -webkit-transform: rotateY(315deg) translateZ(250px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+
+            <div class="shape">
+
+                <div class="plane p1">
+                    <p><a href="#">Rack of Ribs</a></p>
+                </div>
+                <div class="plane p2">2</div>
+                <div class="plane p3">3</div>
+                <div class="plane p4">4</div>
+                <div class="plane p5">5</div>
+                <div class="plane p6">6</div>
+                <div class="plane p7">7</div>
+                <div class="plane p8">8</div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="#" async defer></script>
+</body>
+
+</html>

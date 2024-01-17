@@ -9,6 +9,7 @@ body {
 
 }
 
+
 .row {
     margin-left: 0px;
 }
@@ -387,10 +388,8 @@ select {
     color: #353232;
     padding: 30px;
     width: 290px;
-    max-width: 300px;
-    min-width: 190px;
+    min-width: 20px;
     box-sizing: border-box;
-    min-height: 100vh;
 }
 
 .sidebar img {
@@ -456,13 +455,151 @@ select {
 
 
 /* Responsive Styles */
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Mobile-First Approach */
 @media (max-width: 768px) {
+    .logo_title {
+        margin-bottom: 10px;
+        /* Adjust as needed for smaller screens */
+    }
+
+    .result-container {
+        width: 375px;
+        margin-left: 5px;
+        max-height: 1500px;
+    }
+
+    .result-container .horizontal-line {
+        display: none;
+        visibility: hidden;
+    }
+
+    .result-card {
+        /* flex-direction: column;*/
+        /*align-items: flex-start;*/
+        flex-wrap: wrap;
+
+    }
+
+    .result-card .horizontal-line {
+        display: none;
+        visibility: hidden;
+    }
+
+    .vertical-line {
+        left: calc(100% - 5px);
+        width: 0px;
+        height: 0;
+        background-color: #ffffff;
+    }
+
+
+    .search-btn,
+    .add-to-cart-button {
+        margin-top: 10px;
+        /* Adjust as needed for smaller screens */
+    }
+
+    .spacer {
+        height: 0px;
+        /* Adjust as needed for smaller screens */
+        width: 0px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .space {
+        margin-top: 10px;
+        /* Adjust as needed for smaller screens */
+        margin-bottom: 20px;
+        /* Adjust as needed for smaller screens */
+    }
+
     .sidebar {
         width: 100%;
+        min-width: 400px;
+        padding: 10px;
+        /* Adjust as needed for smaller screens */
+        display: flex;
+        flex-direction: column;
+        /*flex-wrap: no-wrap;*/
+        -items: flex-start;
+
+
+    }
+
+    body {
+        position: relative;
+        margin-right: 0;
+        max-width: 600px;
+    }
+
+    .container-fluid {
+        max-width: 600px;
+        padding-bottom: 5px;
     }
 
     .chart-container,
     .main-content {
+        position: relative;
         width: 100%;
+        margin-right: 0;
+        padding: 0px;
+        /* Adjust as needed for smaller screens */
     }
+
+    .s-content {
+        padding: 0px;
+    }
+
+    .filter-card {
+        /*flex-direction: column;*/
+        /* align-items: flex-start; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1px;
+        margin-left: 0;
+        margin-right: 100;
+        margin-bottom: 10px;
+        width: 380px;
+        left: 0;
+        padding: 10px;
+    }
+
+    .filter-option input {
+        width: 100%;
+        /* Adjust input width for smaller screens */
+    }
+
+    .search-btn {
+        margin-left: 210px;
+    }
+
+    .sort-filter {
+        margin-left: 97px;
+    }
+
+    .sort-filter label {
+        margin-right: 10px;
+        transform: translateY(-100%);
+        transform: translateX(-100%);
+
+
+    }
+
+    .sort-filter select {
+        margin-left: 0;
+        margin-top: 5px;
+        /* Adjust as needed for smaller screens */
+    }
+
+    /* Add more specific styles as needed for smaller screens */
 }
