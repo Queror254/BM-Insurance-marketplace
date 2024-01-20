@@ -24,6 +24,10 @@ Route.get('/', async ({ view }) => {
   return view.render('welcome')
 })
 
+Route.get('/dash', async ({ view }) => {
+  return view.render('dashboard')
+})
+
 Route.post('/auth/register', 'AuthController.register').as('auth.register')
 Route.post('/auth/login', 'AuthController.login').as('auth.login')
 Route.get('/auth/logout', 'AuthController.logout').as('auth.logout')

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Adonis Dashboard</title>
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            background: linear-gradient(to right, #9a8c98, #b2969d, #c0a3a3, #d0b0aa, #e0beb1);
+        }
+
+        #sidebar {
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            background-color: #6f5c7f;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 2;
+            transition: background-color 0.5s;
+        }
+
+        #sidebar:hover {
+            background-color: #593f63;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #5b4569;
+            color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+            transition: background-color 0.5s;
+        }
+
+        .navbar:hover {
+            background-color: #3d2a47;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        .menu_items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .item {
+            margin-bottom: 10px;
+            transform: rotate(3deg);
+            transition: transform 0.5s;
+        }
+
+        .item:hover {
+            transform: rotate(-3deg);
+        }
+
+        .nav_link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.3s;
+            transform: skew(-15deg);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 8px;
+        }
+
+        .nav_link:hover {
+            background-color: #8c6f8c;
+        }
+
+        .navlink_icon {
+            margin-right: 10px;
+            transform: skew(15deg);
+        }
+
+        /* Content Animation */
+        .menu-content {
+            display: none;
+        }
+
+        .menu-content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo_item">
+            <i class="bx bx-menu" id="sidebarOpen"></i>
+            CodingNepal
+        </div>
+
+        <div class="search_bar">
+            <input type="text" placeholder="Search" style="padding: 8px; border: none; border-radius: 5px;">
+        </div>
+
+        <div class="navbar_content">
+            <i class="bi bi-grid"></i>
+            <i class='bx bx-sun' id="darkLight"></i>
+            <i class='bx bx-bell'></i>
+            <img src="images/profile.jpg" alt="" class="profile" style="width: 30px; height: 30px; border-radius: 50%;">
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <ul class="menu_items">
+            <li class="item">
+                <a href="#" class="nav_link" onclick="toggleContent('listings')">
+                    <span class="navlink_icon">
+                        <i class="bx bx-list-ul"></i>
+                    </span>
+                    <span class="navlink">Listings</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="nav_link" onclick="toggleContent('potentialBuyers')">
+                    <span class="navlink_icon">
+                        <i class="bx bx-user"></i>
+                    </span>
+                    <span class="navlink">Potential Buyers</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="nav_link" onclick="toggleContent('buyingOffers')">
+                    <span class="navlink_icon">
+                        <i class="bx bx-shopping-bag"></i>
+                    </span>
+                    <span class="navlink">Buying Offers</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+        <div id="listingsContent" class="menu-content active">
+            <!-- Listings content goes here -->
+            <h1>Listings Content</h1>
+        </div>
+
+        <div id="potentialBuyersContent" class="menu-content">
+            <!-- Potential Buyers content goes here -->
+            <h1>Potential Buyers Content</h1>
+        </div>
+
+        <div id="buyingOffersContent" class="menu-content">
+            <!-- Buying Offers content goes here -->
+            <h1>Buying Offers Content</h1>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebarOpen = document.getElementById('sidebarOpen');
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
+
+            sidebarOpen.addEventListener('click', () => {
+                sidebar.classList.toggle('d-none');
+                content.classList.toggle('content-expanded');
+            });
+
+            function toggleContent(menu) {
+                const contents = document.querySelectorAll('.menu-content');
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                const selectedContent = document.getElementById(`${menu}Content`);
+                selectedContent.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

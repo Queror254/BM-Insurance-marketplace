@@ -6,6 +6,7 @@ export default class AuthController {
     public async register({ request, response, auth }: HttpContextContract) {
 
         const userSchema = schema.create({
+            roleId: schema.number(),
             email: schema.string([rules.email(), rules.trim()]),
             password: schema.string([rules.minLength(8)])
         })
