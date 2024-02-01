@@ -8,8 +8,16 @@ export default class extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id').primary()
       table.integer('role_id').unsigned().references('id').inTable('roles').defaultTo(Roles.USER)
-      table.string('email', 255).notNullable().unique()
+      table.string('first_name', 50).notNullable().unique()
+      table.string('second_name', 50).notNullable().unique()
+      table.string('email', 100).notNullable().unique()
       table.string('password', 180).notNullable()
+      table.string('confirm_password', 180).notNullable()
+      table.string('street_address').notNullable()
+      table.string('apt_no').notNullable()
+      table.string('city').notNullable()
+      table.string('state').notNullable()
+      table.integer('zip_code').notNullable().unsigned()
       table.string('remember_me_token').nullable()
 
       /**

@@ -1,0 +1,3430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Victor">
+
+    <title>Baron Meddy | Get health insurance quote with a few clicks.</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+        href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+        href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <link rel="stylesheet" href="css/form.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        .error-message {
+            color: red;
+        }
+
+        .cd-overlay-nav {
+            z-index: 2;
+        }
+
+        .cd-overlay-nav,
+        .cd-overlay-content {
+            position: fixed;
+            top: 18px;
+            right: 5%;
+            height: 4px;
+            width: 4px;
+            -webkit-transform: translateX(-20px) translateY(20px);
+            -moz-transform: translateX(-20px) translateY(20px);
+            -ms-transform: translateX(-20px) translateY(20px);
+            -o-transform: translateX(-20px) translateY(20px);
+            transform: translateX(-20px) translateY(20px);
+        }
+
+        .cd-overlay-nav span {
+            background-color: #434bdf;
+        }
+
+        .cd-overlay-content {
+            z-index: 4;
+        }
+
+        .cd-overlay-nav,
+        .cd-overlay-content {
+            position: fixed;
+            top: 18px;
+            right: 5%;
+            height: 4px;
+            width: 4px;
+            -webkit-transform: translateX(-20px) translateY(20px);
+            -moz-transform: translateX(-20px) translateY(20px);
+            -ms-transform: translateX(-20px) translateY(20px);
+            -o-transform: translateX(-20px) translateY(20px);
+            transform: translateX(-20px) translateY(20px);
+        }
+
+        .cd-overlay-content span {
+            background-color: #434bdf;
+        }
+
+        .cd-nav-trigger {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            height: 44px;
+            width: 44px;
+            z-index: 5;
+            overflow: hidden;
+            text-indent: 100%;
+            white-space: nowrap;
+        }
+
+        .cd-nav-trigger {
+            position: absolute;
+            display: inline-block;
+        }
+
+        a {
+            color: #434bdf;
+            text-decoration: none;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            outline: none;
+        }
+
+        .form-content-container {
+            width: 400px;
+            justify-content: center;
+            display: flex;
+            margin-top: 30px;
+            margin-right: 130px;
+            float: right;
+        }
+
+        .scrollable {
+            min-height: 50%;
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+
+        /* Hide the scrollbar */
+        .scrollable::-webkit-scrollbar {
+            width: 0 !important;
+        }
+
+        .scrollable {
+            scrollbar-width: thin !important;
+        }
+
+        .content-left {
+            background-color: #434bdf;
+            padding: 0;
+        }
+
+        .content-left-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            min-height: 100%;
+            padding: 60px 90px 35px 90px;
+            background-color: #434bdf;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            background: transparent;
+            background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5));
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+        }
+
+        a#logo {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            display: block;
+            height: 35px;
+        }
+
+        .row-height {
+            height: 100vh;
+        }
+
+        .pika-lendar {
+            background: #fff;
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-6 {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+        }
+
+        /**button css**/
+        #step-1 .button {
+            float: right;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #2b66ff !important;
+            color: #fff;
+            width: 100px;
+            min-width: 64px;
+            padding: 10px 15px;
+            border: 1px solid #4361ee;
+            border-radius: 5px;
+            border-color: #2b66ff;
+            cursor: pointer;
+            float: right;
+            right: 0;
+            margin-bottom: 20px;
+
+        }
+
+        .stepper-btns .button :hover {
+            background-color: #d80075;
+        }
+
+        .stepper-btns {
+            display: flex;
+            flex-direction: row;
+            float: right;
+            gap: 10px;
+        }
+
+        .stepper-btns .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #2b66ff !important;
+            color: #fff;
+            width: 100px;
+            min-width: 64px;
+            padding: 10px 15px;
+            border: 1px solid #4361ee;
+            border-radius: 5px;
+            border-color: #2b66ff;
+            cursor: pointer;
+            float: right;
+            right: 0;
+
+        }
+
+        .form-step hr {
+            margin-top: 15px;
+            margin-bottom: 12px;
+        }
+
+        /*
+Theme Name: Wilio
+Theme URI: http://www.ansonika.com/wilio/
+Author: Ansonika
+Author URI: http://themeforest.net/user/Ansonika/
+
+[Table of contents] 
+
+1. SITE STRUCTURE and TYPOGRAPHY
+- 1.1 Typography
+- 1.2 Buttons
+- 1.3 Structure
+
+2. CONTENT
+- 2.1 Wizard
+- 2.2 Success submit
+- 2.3 Inner pages
+
+3. COMMON
+- 3.1 Misc
+- 3.2 Spacing
+
+/*============================================================================================*/
+        /* 1.  SITE STRUCTURE and TYPOGRAPHY */
+        /*============================================================================================*/
+        /*-------- 1.1 Typography --------*/
+        /* rem reference
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem (base)
+18px = 1.125rem
+20px = 1.25rem
+24px = 1.5rem
+30px = 1.875rem
+32px = 2rem
+*/
+        html,
+        body {
+            height: 100%;
+        }
+
+        html * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background: #fff;
+            font-size: 0.875rem;
+            line-height: 1.4;
+            font-family: "Work Sans", Arial, sans-serif;
+            color: #555;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #222;
+        }
+
+        p {
+            margin-bottom: 25px;
+        }
+
+        strong {
+            font-weight: 500;
+        }
+
+        label {
+            font-weight: 400;
+            margin-bottom: 3px;
+            color: #222;
+        }
+
+        hr {
+            margin: 30px 0 30px 0;
+            border-color: #ddd;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+            margin: 0 0 25px 0;
+            padding: 0;
+        }
+
+        /*General links color*/
+        a {
+            color: #434bdf;
+            text-decoration: none;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            outline: none;
+        }
+
+        a:hover,
+        a:focus {
+            color: #111;
+            text-decoration: none;
+            outline: none;
+        }
+
+        a.animated_link {
+            position: relative;
+            text-decoration: none;
+        }
+
+        a.animated_link {
+            position: relative;
+            text-decoration: none;
+        }
+
+        a.animated_link:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -5px;
+            opacity: 1;
+            left: 0;
+            background-color: #434bdf;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        a.animated_link:hover:before {
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+
+        a.animated_link.active {
+            position: relative;
+            text-decoration: none;
+            color: #434bdf;
+        }
+
+        a.animated_link.active:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -5px;
+            opacity: 1;
+            left: 0;
+            background-color: #434bdf;
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+
+        /*-------- 1.2 Buttons --------*/
+        a.btn_1,
+        .btn_1 {
+            border: none;
+            color: #fff;
+            background: #434bdf;
+            outline: none;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 25px;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            font-size: 14px;
+            font-size: 0.875rem;
+        }
+
+        a.btn_1:hover,
+        .btn_1:hover {
+            background-color: #d80075;
+        }
+
+        a.btn_1.full-width,
+        .btn_1.full-width {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        a.btn_1.small,
+        .btn_1.small {
+            padding: 7px 10px;
+            font-size: 13px;
+            font-size: 0.8125rem;
+        }
+
+        a.btn_1.medium,
+        .btn_1.medium {
+            font-size: 16px;
+            font-size: 1rem;
+            padding: 18px 30px;
+        }
+
+        a.btn_1.rounded,
+        .btn_1.rounded {
+            -webkit-border-radius: 25px !important;
+            -moz-border-radius: 25px !important;
+            -ms-border-radius: 25px !important;
+            border-radius: 25px !important;
+            -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        /*-------- 1.3 Structure --------*/
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            background-color: #fff;
+            z-index: 999999;
+        }
+
+        [data-loader="circle-side"] {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 50%;
+            left: 50%;
+            margin-left: -25px;
+            margin-top: -25px;
+            -webkit-animation: circle infinite .95s linear;
+            -moz-animation: circle infinite .95s linear;
+            -o-animation: circle infinite .95s linear;
+            animation: circle infinite .95s linear;
+            border: 2px solid #333;
+            border-top-color: rgba(0, 0, 0, 0.2);
+            border-right-color: rgba(0, 0, 0, 0.2);
+            border-bottom-color: rgba(0, 0, 0, 0.2);
+            border-radius: 100%;
+        }
+
+        #loader_form {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.6);
+            z-index: 999999;
+            display: none;
+        }
+
+        [data-loader="circle-side-2"] {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 50%;
+            left: 50%;
+            margin-left: -25px;
+            margin-top: -25px;
+            -webkit-animation: circle infinite .95s linear;
+            -moz-animation: circle infinite .95s linear;
+            -o-animation: circle infinite .95s linear;
+            animation: circle infinite .95s linear;
+            border: 2px solid #333;
+            border-top-color: rgba(0, 0, 0, 0.2);
+            border-right-color: rgba(0, 0, 0, 0.2);
+            border-bottom-color: rgba(0, 0, 0, 0.2);
+            border-radius: 100%;
+        }
+
+        @-webkit-keyframes circle {
+            0% {
+                -webkit-transform: rotate(0);
+                -ms-transform: rotate(0);
+                -o-transform: rotate(0);
+                transform: rotate(0);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @-moz-keyframes circle {
+            0% {
+                -webkit-transform: rotate(0);
+                -ms-transform: rotate(0);
+                -o-transform: rotate(0);
+                transform: rotate(0);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @-o-keyframes circle {
+            0% {
+                -webkit-transform: rotate(0);
+                -ms-transform: rotate(0);
+                -o-transform: rotate(0);
+                transform: rotate(0);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes circle {
+            0% {
+                -webkit-transform: rotate(0);
+                -ms-transform: rotate(0);
+                -o-transform: rotate(0);
+                transform: rotate(0);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .row-height {
+            height: 100vh;
+        }
+
+        @media (max-width: 991px) {
+            .row-height {
+                height: auto;
+            }
+        }
+
+        .content-left {
+            background-color: #434bdf;
+            padding: 0;
+        }
+
+        .content-left-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            min-height: 100%;
+            padding: 60px 90px 35px 90px;
+            background-color: #434bdf;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            background: transparent;
+            background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.5));
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+        }
+
+        @media (max-width: 991px) {
+            .content-left-wrapper {
+                height: auto;
+                padding: 95px 30px 35px 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .content-left-wrapper {
+                padding: 95px 15px 35px 15px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .content-left-wrapper figure img {
+                height: 150px;
+            }
+        }
+
+        .content-left-wrapper h2 {
+            color: #fff;
+            font-size: 32px;
+            font-size: 2rem;
+            margin: 20px 0 15px 0;
+            font-weight: 400;
+        }
+
+        @media (max-width: 767px) {
+            .content-left-wrapper h2 {
+                font-size: 26px;
+                font-size: 1.625rem;
+            }
+        }
+
+        .content-left-wrapper p {
+            font-size: 15px;
+            font-size: 0.9375rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 767px) {
+            .content-left-wrapper p {
+                font-size: 14px;
+                font-size: 0.875rem;
+            }
+        }
+
+        .content-left-wrapper .btn_1 {
+            margin: 25px 0 25px 0;
+        }
+
+        @media (max-width: 991px) {
+            .content-left-wrapper .btn_1 {
+                display: none;
+            }
+        }
+
+        .content-left-wrapper .btn_1.mobile_btn {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .content-left-wrapper .btn_1.mobile_btn {
+                margin: 5px 0 30px 0;
+                display: inline-block;
+            }
+        }
+
+        .content-right {
+            padding: 60px;
+            height: 100%;
+            min-height: 100%;
+            overflow-y: scroll;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 991px) {
+            .content-right {
+                height: auto;
+                padding: 30px 15px;
+            }
+        }
+
+        a#logo {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            display: block;
+            height: 35px;
+        }
+
+        @media (max-width: 991px) {
+            a#logo {
+                left: 15px;
+                top: 10px;
+            }
+        }
+
+        #social {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        @media (max-width: 991px) {
+            #social {
+                right: 70px;
+            }
+        }
+
+        #social ul {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #social ul li {
+            float: left;
+            margin: 0 5px 10px 0;
+            list-style: none;
+        }
+
+        #social ul li a {
+            color: #fff;
+            opacity: 0.6;
+            text-align: center;
+            line-height: 35px;
+            display: block;
+            font-size: 16px;
+            font-size: 1rem;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #social ul li a:hover {
+            opacity: 1;
+        }
+
+        .copy {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 991px) {
+            .copy {
+                display: none;
+            }
+        }
+
+        /*============================================================================================*/
+        /* 2.  CONTENT */
+        /*============================================================================================*/
+        /*-------- 2.1 Wizard --------*/
+        #left_form {
+            text-align: center;
+        }
+
+        #left_form h2 {
+            font-size: 28px;
+            font-size: 1.75rem;
+            color: #0686D8;
+        }
+
+        @media (max-width: 767px) {
+            #left_form figure img {
+                height: 130px;
+                width: auto;
+            }
+        }
+
+        input#website {
+            display: none;
+        }
+
+        #wizard_container {
+            width: 400px;
+        }
+
+        @media (max-width: 767px) {
+            #wizard_container {
+                width: 100%;
+            }
+        }
+
+        h3.main_question {
+            margin: 0 0 20px 0;
+            padding: 0;
+            font-weight: 500;
+            font-size: 18px;
+            font-size: 1.125rem;
+        }
+
+        h3.main_question strong {
+            display: block;
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+        /* Wizard Buttons*/
+        button.backward,
+        button.forward,
+        button.submit {
+            border: none;
+            color: #fff;
+            text-decoration: none;
+            transition: background .5s ease;
+            -moz-transition: background .5s ease;
+            -webkit-transition: background .5s ease;
+            -o-transition: background .5s ease;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+            text-align: center;
+            background: #434bdf;
+            position: relative;
+            font-size: 14px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            line-height: 1;
+            padding: 12px 30px;
+        }
+
+        button.backward {
+            color: #777;
+            background: #e8e8e8;
+        }
+
+        button[disabled] {
+            display: none;
+        }
+
+        button.submit:before {
+            content: "\4e";
+            font-family: 'ElegantIcons';
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            font-size: 18px;
+            font-size: 1.125rem;
+        }
+
+        .backward:hover,
+        .forward:hover {
+            background: #d80075;
+            color: #fff;
+        }
+
+        #top-wizard {
+            padding-bottom: 20px;
+        }
+
+        #middle-wizard {
+            min-height: 330px;
+        }
+
+        @media (max-width: 991px) {
+            #middle-wizard {
+                min-height: inherit;
+            }
+        }
+
+        #bottom-wizard {
+            border-top: 2px solid #ededed;
+            padding-top: 20px;
+            text-align: right;
+            margin-top: 25px;
+        }
+
+        .ui-widget-content {
+            background-color: transparent;
+        }
+
+        .ui-widget-content a {
+            color: #222222;
+        }
+
+        .ui-widget-header {
+            background: #6C3;
+        }
+
+        .ui-widget-header a {
+            color: #222222;
+        }
+
+        .ui-progressbar {
+            height: 2px;
+            width: 100%;
+        }
+
+        .ui-progressbar .ui-progressbar-value {
+            height: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        .summary ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .summary ul li {
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid #ededed;
+            position: relative;
+            padding-left: 45px;
+            margin-bottom: 25px;
+        }
+
+        .summary ul li:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        .summary ul li strong {
+            display: block;
+            line-height: 26px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: center;
+            border: 2px solid #ddd;
+        }
+
+        .summary ul li h5 {
+            padding-top: 6px;
+            font-size: 15px;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: #0686D8;
+        }
+
+        .summary ul li ul {
+            margin: 20px 0 25px 0;
+            padding: 0;
+        }
+
+        .summary ul li ul li {
+            margin: 0;
+            padding: 0;
+            border-bottom: 0;
+        }
+
+        .summary label {
+            font-weight: 500;
+        }
+
+        /*-------- 2.2 Success submit --------*/
+        #success {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 190px;
+            margin-top: -85px;
+            margin-left: -150px;
+            text-align: center;
+        }
+
+        #success h4 {
+            font-weight: 400;
+            margin: 20px 0 0 0;
+            font-size: 18px;
+            font-size: 1.125rem;
+        }
+
+        #success h4 span {
+            display: block;
+            margin-bottom: 0;
+            font-weight: 500;
+            font-size: 21px;
+            font-size: 1.3125rem;
+        }
+
+        @-webkit-keyframes checkmark {
+            0% {
+                stroke-dashoffset: 50px;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @-ms-keyframes checkmark {
+            0% {
+                stroke-dashoffset: 50px;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes checkmark {
+            0% {
+                stroke-dashoffset: 50px;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @-webkit-keyframes checkmark-circle {
+            0% {
+                stroke-dashoffset: 240px;
+            }
+
+            100% {
+                stroke-dashoffset: 480px;
+            }
+        }
+
+        @-ms-keyframes checkmark-circle {
+            0% {
+                stroke-dashoffset: 240px;
+            }
+
+            100% {
+                stroke-dashoffset: 480px;
+            }
+        }
+
+        @keyframes checkmark-circle {
+            0% {
+                stroke-dashoffset: 240px;
+            }
+
+            100% {
+                stroke-dashoffset: 480px;
+            }
+        }
+
+        .inlinesvg .svg svg {
+            display: inline;
+        }
+
+        .icon--order-success svg path {
+            -webkit-animation: checkmark 0.25s ease-in-out 0.7s backwards;
+            animation: checkmark 0.25s ease-in-out 0.7s backwards;
+        }
+
+        .icon--order-success svg circle {
+            -webkit-animation: checkmark-circle 0.6s ease-in-out backwards;
+            animation: checkmark-circle 0.6s ease-in-out backwards;
+        }
+
+        /*-------- 2.3 Inner pages --------*/
+        header {
+            position: relative;
+            padding: 15px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #d9e1e6;
+        }
+
+        header .cd-nav-trigger {
+            top: -5px !important;
+        }
+
+        header #social {
+            right: 80px;
+            top: 0;
+        }
+
+        header #social ul li a {
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #ededed;
+            padding: 30px 0;
+        }
+
+        footer p {
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+
+        @media (max-width: 991px) {
+            footer p {
+                float: none;
+            }
+        }
+
+        footer ul {
+            float: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (max-width: 991px) {
+            footer ul {
+                float: none;
+                margin-top: 10px;
+            }
+        }
+
+        footer ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        footer ul li:after {
+            content: "|";
+            font-weight: 300;
+            position: relative;
+            left: 9px;
+            color: #999;
+        }
+
+        footer ul li:last-child {
+            margin-right: 0;
+        }
+
+        footer ul li:last-child:after {
+            content: "";
+        }
+
+        footer ul li a {
+            color: #555;
+        }
+
+        footer ul li a:hover {
+            color: #121921;
+        }
+
+        .main_title {
+            text-align: center;
+        }
+
+        .main_title h2 {
+            margin: 0 0 10px 0;
+            padding: 0;
+            font-size: 42px;
+            font-size: 2.625rem;
+            color: #434bdf;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 767px) {
+            .main_title h2 {
+                font-size: 32px;
+                font-size: 2rem;
+            }
+        }
+
+        .main_title h2 em {
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: #ededed;
+            margin: auto;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .main_title p {
+            font-size: 18px;
+            font-size: 1.125rem;
+            padding: 0 10%;
+            margin-bottom: 45px;
+            color: #777;
+        }
+
+        @media (max-width: 767px) {
+            .main_title p {
+                font-size: 16px;
+                font-size: 1rem;
+            }
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span,
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background: #434bdf !important;
+        }
+
+        main#general_page {
+            background-color: #fff;
+        }
+
+        iframe#map_iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+
+        @media (max-width: 991px) {
+            iframe#map_iframe {
+                height: 400px;
+            }
+        }
+
+        .box_style_2 {
+            background-color: #f8f8f8;
+            padding: 25px 30px 30px 30px;
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .box_style_2 .form-control {
+            background-color: #fff !important;
+        }
+
+        .box_style_2 hr {
+            margin: 10px -30px 20px -30px;
+            border: 0;
+            border-top: 2px solid #fff;
+        }
+
+        ul.contacts_info {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+        }
+
+        ul.contacts_info li {
+            margin-bottom: 15px;
+        }
+
+        ul.contacts_info li:last-child {
+            margin-bottom: 0;
+        }
+
+        .parallax_window_in {
+            height: 420px;
+            position: relative;
+            display: table;
+            width: 100%;
+        }
+
+        #sub_content_in {
+            display: table-cell;
+            padding: 45px 15% 0 15%;
+            vertical-align: middle;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 767px) {
+            #sub_content_in {
+                padding: 45px 30px 0 30px;
+            }
+        }
+
+        #sub_content_in h1 {
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 46px;
+            font-size: 46px;
+            font-size: 2.875rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 767px) {
+            #sub_content_in h1 {
+                font-size: 36px;
+                font-size: 2.25rem;
+            }
+        }
+
+        #sub_content_in p {
+            color: #fff;
+            font-size: 24px;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 767px) {
+            #sub_content_in p {
+                font-size: 21px;
+                font-size: 1.3125rem;
+            }
+        }
+
+        .container_styled_1 {
+            background: #f9f9f9;
+        }
+
+        .team-item-img {
+            position: relative;
+        }
+
+        .team-item-img .team-item-detail {
+            background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+            text-align: center;
+            color: #fff;
+            display: -webkit-flex;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out 0s;
+            -moz-transition: all 0.5s ease-in-out 0s;
+            -webkit-transition: all 0.5s ease-in-out 0s;
+            -o-transition: all 0.5s ease-in-out 0s;
+        }
+
+        .team-item:hover .team-item-detail {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .team-item-img .team-item-detail .team-item-detail-inner {
+            margin: auto;
+            padding: 25px;
+        }
+
+        .team-item-detail-inner h4 {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .team-item-detail-inner .social {
+            margin: 0 0px 25px 0px;
+            padding: 0px;
+        }
+
+        .team-item-detail-inner .social li {
+            list-style: none;
+            display: inline-block;
+            margin: 0px 5px;
+        }
+
+        .team-item-detail-inner .social li a {
+            color: #fff;
+        }
+
+        .team-item-detail-inner .social li a:hover {
+            color: #d80075;
+        }
+
+        .team-item-info {
+            padding-top: 15px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .team-item-info h4 {
+            margin-bottom: 0px;
+        }
+
+        .error_message {
+            font-weight: 500;
+            color: #ee5050;
+        }
+
+        /*============================================================================================*/
+        /* 3.  COMMON */
+        /*============================================================================================*/
+        /*-------- 3.1 Misc --------*/
+        .modal-content {
+            border: none;
+            -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .form-group.terms {
+            padding: 12px 0 0 0;
+        }
+
+        .form-group i {
+            font-size: 18px;
+            font-size: 1.125rem;
+            position: absolute;
+            right: 5px;
+            top: 11px;
+            color: #ccc;
+            width: 25px;
+            height: 25px;
+            display: block;
+            font-weight: 400 !important;
+        }
+
+        span.error {
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            font-size: 12px;
+            position: absolute;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            top: -20px;
+            right: -15px;
+            z-index: 2;
+            height: 25px;
+            line-height: 1;
+            background-color: #e34f4f;
+            color: #fff;
+            font-weight: normal;
+            display: inline-block;
+            padding: 6px 8px;
+        }
+
+        span.error:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 6px 6px 0;
+            border-color: transparent #e34f4f;
+            display: block;
+            width: 0;
+            z-index: 1;
+            bottom: -6px;
+            left: 20%;
+        }
+
+        .container_radio.version_2 .error,
+        .container_check.version_2 .error {
+            left: -15px;
+            top: -30px;
+            right: inherit;
+        }
+
+        .radio_input .error {
+            left: -15px;
+            top: -30px;
+            right: inherit;
+        }
+
+        .styled-select span.error {
+            top: -20px;
+        }
+
+        .terms span.error {
+            top: -30px;
+            left: -15px;
+            right: inherit;
+        }
+
+        .form-control {
+            border: 1px solid #d2d8dd;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            font-size: 14px;
+            font-size: 0.875rem;
+            height: calc(2.55rem + 2px);
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #434bdf;
+        }
+
+        .rating_wp {
+            background-color: #f9f9f9;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+            padding: 14px 10px 10px 15px;
+            margin-bottom: 5px;
+        }
+
+        .rating {
+            display: inline-block;
+            font-size: 0;
+            float: right;
+            position: relative;
+        }
+
+        @media (max-width: 767px) {
+            .rating {
+                float: left;
+                display: block;
+            }
+        }
+
+        .rating span.error {
+            top: -30px;
+        }
+
+        .rating_type {
+            float: left;
+            font-size: 16px;
+            font-size: 1rem;
+            font-weight: 500 !important;
+            font-weight: normal;
+            color: #434bdf;
+        }
+
+        @media (max-width: 767px) {
+            .rating_type {
+                float: none;
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+
+        .rating-input {
+            float: right;
+            padding: 0;
+            margin: 0 0 0 0;
+            opacity: 0;
+            width: 4px;
+        }
+
+        .rating:hover .rating-star:hover,
+        .rating:hover .rating-star:hover~.rating-star,
+        .rating-input:checked~.rating-star {
+            background-position: 0 0;
+        }
+
+        .rating-star,
+        .rating:hover .rating-star {
+            cursor: pointer;
+            float: right;
+            display: block;
+            width: 25px;
+            height: 25px;
+            margin-right: 0;
+            background: url(../img/stars.svg) 0 -27px;
+        }
+
+        .review_message {
+            height: 250px !important;
+        }
+
+        @media (max-width: 767px) {
+            .review_message {
+                height: 200px !important;
+            }
+        }
+
+        /* Checkbox style */
+        .container_check {
+            display: block;
+            position: relative;
+            font-size: 14px;
+            font-size: 0.875rem;
+            padding-left: 30px;
+            line-height: 1.3;
+            margin-bottom: 10px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .container_check input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .container_check input:checked~.checkmark {
+            background-color: #434bdf;
+            border: 1px solid transparent;
+        }
+
+        .container_check .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border: 1px solid #d2d8dd;
+            background-color: #fff;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .container_check .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 7px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .container_check.version_2 {
+            padding: 6px 0 0 45px;
+            min-height: 30px;
+        }
+
+        .container_check.version_2 .checkmark {
+            height: 30px;
+            width: 30px;
+        }
+
+        .container_check.version_2 .checkmark:after {
+            left: 12px;
+            top: 8px;
+            width: 5px;
+            height: 10px;
+        }
+
+        .container_check input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Radio buttons */
+        .container_radio {
+            display: block;
+            position: relative;
+            font-size: 14px;
+            font-size: 0.875rem;
+            padding-left: 30px;
+            line-height: 1.3;
+            margin-bottom: 10px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .container_radio input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .container_radio input:checked~.checkmark:after {
+            opacity: 1;
+        }
+
+        .container_radio .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+        }
+
+        .container_radio .checkmark:after {
+            display: block;
+            content: "";
+            position: absolute;
+            opacity: 0;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            top: 3px;
+            left: 3px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #434bdf;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .container_radio.version_2 {
+            padding: 6px 0 0 45px;
+            min-height: 30px;
+        }
+
+        .container_radio.version_2 input:checked~.checkmark:before {
+            opacity: 1;
+        }
+
+        .container_radio.version_2 .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 30px;
+            width: 30px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+        }
+
+        .container_radio.version_2 .checkmark:after {
+            width: 30px;
+            height: 30px;
+            top: -1px;
+            left: -1px;
+        }
+
+        .container_radio.version_2 .checkmark:before {
+            display: block;
+            content: "";
+            position: absolute;
+            opacity: 0;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            left: 12px;
+            top: 8px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            z-index: 999;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        /* Show/hide password */
+        .my-toggle {
+            background: transparent;
+            border: 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            color: #888;
+            cursor: pointer;
+            font-size: 10px;
+            font-size: 10px;
+            font-size: 0.625rem;
+            font-weight: bold;
+            margin-right: 5px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+            text-transform: uppercase;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-color: #fff;
+        }
+
+        .my-toggle:hover,
+        .my-toggle:focus {
+            background-color: #eee;
+            color: #555;
+            outline: transparent;
+        }
+
+        .hideShowPassword-wrapper {
+            width: 100% !important;
+        }
+
+        /*Password strength */
+        #pass-info {
+            width: 100%;
+            margin-bottom: 15px;
+            color: #555;
+            text-align: center;
+            font-size: 12px;
+            font-size: 0.75rem;
+            padding: 5px 3px 3px 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        #pass-info.weakpass {
+            border: 1px solid #FF9191;
+            background: #FFC7C7;
+            color: #94546E;
+        }
+
+        #pass-info.stillweakpass {
+            border: 1px solid #FBB;
+            background: #FDD;
+            color: #945870;
+        }
+
+        #pass-info.goodpass {
+            border: 1px solid #C4EEC8;
+            background: #E4FFE4;
+            color: #51926E;
+        }
+
+        #pass-info.strongpass {
+            border: 1px solid #6ED66E;
+            background: #79F079;
+            color: #348F34;
+        }
+
+        #pass-info.vrystrongpass {
+            border: 1px solid #379137;
+            background: #48B448;
+            color: #CDFFCD;
+        }
+
+        .radio_input .container_radio {
+            display: inline-block;
+            margin: 12px 0 0 12px;
+        }
+
+        /* Fileupload */
+        .fileupload {
+            position: relative;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        input[type=file] {
+            border: 1px solid #d2d8dd;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            padding: 5px;
+            height: auto;
+            width: 100%;
+            color: #999;
+        }
+
+        input[type=file]:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+        input[type=file]::-webkit-file-upload-button,
+        input[type=file].invalid::-webkit-file-upload-button,
+        input[type=file].valid::-webkit-file-upload-button {
+            color: #fff;
+            font-size: 13px;
+            border: 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            padding: 8px 10px 8px 38px;
+            background: #434bdf url(../img/upload_icon.svg) 8px center no-repeat;
+            outline: none;
+        }
+
+        input[type=file]::-webkit-file-upload-button:focus,
+        input[type=file].invalid::-webkit-file-upload-button:focus,
+        input[type=file].valid::-webkit-file-upload-button:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+        /* Jquery select */
+        .nice-select {
+            -webkit-tap-highlight-color: transparent;
+            background-color: #fff;
+            border-radius: 3px;
+            border: 1px solid #d2d8dd;
+            box-sizing: border-box;
+            clear: both;
+            cursor: pointer;
+            display: block;
+            float: left;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: normal;
+            height: 42px;
+            line-height: 40px;
+            outline: none;
+            padding-left: 15px;
+            padding-right: 27px;
+            position: relative;
+            text-align: left !important;
+            transition: all 0.2s ease-in-out;
+            user-select: none;
+            white-space: nowrap;
+            width: auto;
+            color: #6c757d;
+        }
+
+        .nice-select:active,
+        .nice-select.open,
+        .nice-select:focus {
+            border-color: #434bdf;
+        }
+
+        .nice-select:after {
+            border-bottom: 2px solid #ccc;
+            border-right: 2px solid #ccc;
+            content: '';
+            display: block;
+            height: 8px;
+            margin-top: -5px;
+            pointer-events: none;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform-origin: 66% 66%;
+            transform: rotate(45deg);
+            transition: all 0.15s ease-in-out;
+            width: 8px;
+        }
+
+        .nice-select.open:after {
+            transform: rotate(-135deg);
+        }
+
+        .nice-select.open .list {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1) translateY(0);
+        }
+
+        .nice-select.disabled {
+            border-color: #9e9e9e;
+            color: #999;
+            pointer-events: none;
+        }
+
+        .nice-select.disabled:after {
+            border-color: white;
+        }
+
+        .nice-select.wide {
+            width: 100%;
+        }
+
+        .nice-select.wide .list {
+            left: -1px !important;
+            right: -1px !important;
+        }
+
+        .nice-select.right {
+            float: right;
+        }
+
+        .nice-select.right .list {
+            left: auto;
+            right: 0;
+        }
+
+        .nice-select.small {
+            font-size: 12px;
+            height: 42px;
+            line-height: 40px;
+        }
+
+        .nice-select.small:after {
+            height: 4px;
+            width: 4px;
+        }
+
+        .nice-select.small .option {
+            line-height: 40px;
+            min-height: 40px;
+        }
+
+        .nice-select .list {
+            background-color: #fff;
+            border-radius: 3px;
+            box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+            box-sizing: border-box;
+            margin-top: 4px;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform-origin: 50% 0;
+            transform: scale(0.75) translateY(-25px);
+            transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+            z-index: 9999;
+            height: 23vh;
+            overflow: auto;
+        }
+
+        .nice-select .list:hover .option:not(:hover) {
+            background-color: transparent !important;
+        }
+
+        .nice-select .list::-webkit-scrollbar {
+            width: 14px;
+            height: 18px;
+        }
+
+        .nice-select .list::-webkit-scrollbar-thumb {
+            height: 6px;
+            border: 4px solid transparent;
+            background-clip: padding-box;
+            -webkit-border-radius: 7px;
+            background-color: rgba(0, 0, 0, 0.15);
+            -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+        }
+
+        .nice-select .list::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        .nice-select .list::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
+
+        .nice-select .option {
+            cursor: pointer;
+            font-weight: 400;
+            line-height: 38px;
+            list-style: none;
+            min-height: 38px;
+            outline: none;
+            padding-left: 15px;
+            padding-right: 26px;
+            text-align: left;
+            transition: all 0.2s;
+        }
+
+        .nice-select .option:hover,
+        .nice-select .option.focus,
+        .nice-select .option.selected.focus {
+            background-color: #f6f6f6;
+        }
+
+        .nice-select .option.selected {
+            font-weight: 500;
+        }
+
+        .nice-select .option.disabled {
+            background-color: transparent;
+            color: #999;
+            cursor: default;
+        }
+
+        .no-csspointerevents .nice-select .list {
+            display: none;
+        }
+
+        .no-csspointerevents .nice-select.open .list {
+            display: block;
+        }
+
+        /* Budget slider */
+        .budget_slider {
+            background-color: #f8f8f8;
+            margin-bottom: 20px;
+            padding: 45px 30px 15px 30px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        .budget_slider span {
+            display: block;
+            font-weight: 600;
+            color: #434bdf;
+            font-size: 24px;
+            font-size: 1.5rem;
+            margin-top: 25px;
+        }
+
+        .budget_slider span:before {
+            content: '$';
+        }
+
+        .rangeslider__handle {
+            border: 2px solid #434bdf !important;
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        .rangeslider__fill {
+            background: #434bdf !important;
+        }
+
+        /*-------- 3.2 Spacing --------*/
+        .add_bottom_10 {
+            margin-bottom: 10px;
+        }
+
+        .add_bottom_15 {
+            margin-bottom: 15px;
+        }
+
+        .add_bottom_30 {
+            margin-bottom: 30px;
+        }
+
+        .add_bottom_45 {
+            margin-bottom: 45px;
+        }
+
+        .add_bottom_60 {
+            margin-bottom: 60px;
+        }
+
+        .add_bottom_75 {
+            margin-bottom: 75px;
+        }
+
+        .add_top_10 {
+            margin-top: 10px;
+        }
+
+        .add_top_15 {
+            margin-top: 15px;
+        }
+
+        .add_top_20 {
+            margin-top: 20px;
+        }
+
+        .add_top_30 {
+            margin-top: 30px;
+        }
+
+        .add_top_60 {
+            margin-top: 60px;
+        }
+
+        .more_padding_left {
+            padding-left: 40px;
+        }
+
+        .nomargin_top {
+            margin-top: 0;
+        }
+
+        .nopadding {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .nomargin {
+            margin: 0 !important;
+        }
+
+        .margin_30 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .margin_60 {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .margin_60_35 {
+            padding-top: 60px;
+            padding-bottom: 35px;
+        }
+
+
+        /*************Menu csss ****************/
+        /* -------------------------------- 
+Primary style
+-------------------------------- */
+        *,
+        *::after,
+        *::before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        *::after,
+        *::before {
+            content: '';
+        }
+
+        /* -------------------------------- 
+  Main components 
+  -------------------------------- */
+        .cd-nav-trigger {
+            position: absolute;
+            display: inline-block;
+        }
+
+        .cd-nav-trigger {
+            top: 15px;
+            right: 20px;
+            height: 44px;
+            width: 44px;
+            z-index: 5;
+            /* image replacement */
+            overflow: hidden;
+            text-indent: 100%;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 991px) {
+            .cd-nav-trigger {
+                top: 10px;
+                right: 15px;
+            }
+        }
+
+        .cd-nav-trigger .cd-icon {
+            /* icon created in CSS */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            bottom: auto;
+            right: auto;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -o-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            width: 18px;
+            height: 2px;
+            background-color: #222;
+            z-index: 10;
+        }
+
+        .cd-nav-trigger .cd-icon::before,
+        .cd-nav-trigger .cd-icon:after {
+            /* upper and lower lines of the menu icon */
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            /* Force Hardware Acceleration in WebKit */
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            /* apply transition to transform property */
+            -webkit-transition: -webkit-transform .3s;
+            -moz-transition: -moz-transform .3s;
+            transition: transform .3s;
+        }
+
+        .cd-nav-trigger .cd-icon::before {
+            -webkit-transform: translateY(-6px) rotate(0deg);
+            -moz-transform: translateY(-6px) rotate(0deg);
+            -ms-transform: translateY(-6px) rotate(0deg);
+            -o-transform: translateY(-6px) rotate(0deg);
+            transform: translateY(-6px) rotate(0deg);
+        }
+
+        .cd-nav-trigger .cd-icon::after {
+            -webkit-transform: translateY(6px) rotate(0deg);
+            -moz-transform: translateY(6px) rotate(0deg);
+            -ms-transform: translateY(6px) rotate(0deg);
+            -o-transform: translateY(6px) rotate(0deg);
+            transform: translateY(6px) rotate(0deg);
+        }
+
+        .cd-nav-trigger::before,
+        .cd-nav-trigger::after {
+            /* 2 rounded colored backgrounds for the menu icon */
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+            /* Force Hardware Acceleration in WebKit */
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition-property: -webkit-transform;
+            -moz-transition-property: -moz-transform;
+            transition-property: transform;
+        }
+
+        .cd-nav-trigger::before {
+            background-color: #ededed;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition-duration: 0.3s;
+            -moz-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-delay: 0.4s;
+            -moz-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+        }
+
+        .cd-nav-trigger::after {
+            background-color: #ededed;
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition-duration: 0s;
+            -moz-transition-duration: 0s;
+            transition-duration: 0s;
+            -webkit-transition-delay: 0s;
+            -moz-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+
+        .cd-nav-trigger.close-nav::before {
+            /* user clicks on the .cd-nav-trigger element - 1st rounded background disappears */
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+        }
+
+        .cd-nav-trigger.close-nav::after {
+            /* user clicks on the .cd-nav-trigger element - 2nd rounded background appears */
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition-duration: 0.3s;
+            -moz-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-delay: 0.4s;
+            -moz-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+        }
+
+        .cd-nav-trigger.close-nav .cd-icon {
+            /* user clicks on the .cd-nav-trigger element - transform the icon */
+            background-color: transparent;
+        }
+
+        .cd-nav-trigger.close-nav .cd-icon::before,
+        .cd-nav-trigger.close-nav .cd-icon::after {
+            background-color: #222;
+        }
+
+        .cd-nav-trigger.close-nav .cd-icon::before {
+            -webkit-transform: translateY(0) rotate(45deg);
+            -moz-transform: translateY(0) rotate(45deg);
+            -ms-transform: translateY(0) rotate(45deg);
+            -o-transform: translateY(0) rotate(45deg);
+            transform: translateY(0) rotate(45deg);
+        }
+
+        .cd-nav-trigger.close-nav .cd-icon::after {
+            -webkit-transform: translateY(0) rotate(-45deg);
+            -moz-transform: translateY(0) rotate(-45deg);
+            -ms-transform: translateY(0) rotate(-45deg);
+            -o-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+        }
+
+        .cd-primary-nav {
+            /* by default it's hidden */
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            padding: 80px 5%;
+            z-index: 3;
+            background-color: #fff;
+            overflow: auto;
+            /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+            -webkit-overflow-scrolling: touch;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: visibility 0s, opacity 0.3s;
+            -moz-transition: visibility 0s, opacity 0.3s;
+            transition: visibility 0s, opacity 0.3s;
+        }
+
+        ul.cd-primary-nav {
+            list-style: none;
+            padding: 80px 0 0 0;
+            margin: 0;
+        }
+
+        .cd-primary-nav li {
+            margin: 1.2em 0;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .cd-primary-nav a {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-transition: color 0.2s;
+            -moz-transition: color 0.2s;
+            transition: color 0.2s;
+            color: #777;
+            font-size: 18px;
+        }
+
+        .no-touch .cd-primary-nav a:hover {
+            color: #434bdf;
+        }
+
+        .cd-primary-nav.fade-in {
+            /* navigation visible at the end of the circle animation */
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .cd-primary-nav li {
+                margin: 2em 0;
+            }
+
+            .cd-primary-nav a {
+                font-size: 21px;
+            }
+        }
+
+        @media only screen and (min-width: 1170px) {
+            .cd-primary-nav li {
+                margin: 2.6em 0;
+            }
+
+            .cd-primary-nav a {
+                font-size: 24px;
+            }
+        }
+
+        .cd-overlay-nav,
+        .cd-overlay-content {
+            /* containers of the 2 main rounded backgrounds - these containers are used to position the rounded bgs behind the menu icon */
+            position: fixed;
+            top: 18px;
+            right: 5%;
+            height: 4px;
+            width: 4px;
+            -webkit-transform: translateX(-20px) translateY(20px);
+            -moz-transform: translateX(-20px) translateY(20px);
+            -ms-transform: translateX(-20px) translateY(20px);
+            -o-transform: translateX(-20px) translateY(20px);
+            transform: translateX(-20px) translateY(20px);
+        }
+
+        .cd-overlay-nav span,
+        .cd-overlay-content span {
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            /* Force Hardware Acceleration in WebKit */
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            will-change: transform;
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+            -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+        }
+
+        .cd-overlay-nav.is-hidden,
+        .cd-overlay-content.is-hidden {
+            /* background fades out at the end of the animation */
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+            -moz-transition: opacity .3s 0s, visibility 0s .3s;
+            transition: opacity .3s 0s, visibility 0s .3s;
+        }
+
+        .cd-overlay-nav {
+            /* main rounded colored bg 1 */
+            z-index: 2;
+        }
+
+        .cd-overlay-nav span {
+            background-color: #434bdf;
+        }
+
+        .cd-overlay-content {
+            /* main rounded colored bg 2 */
+            z-index: 4;
+        }
+
+        .cd-overlay-content span {
+            background-color: #434bdf;
+        }
+
+        /*******************/
+    </style>
+</head>
+
+<body class="container-fluid">
+    <div class="container-xxl">
+        <div class="row row-height">
+            <div class="col-6 content-left">
+                <div class="content-left-wrapper">
+                    <a href="index.html" id="logo"><img src="images/logo.png" alt="" width="49" height="35"></a>
+                    <div id="social">
+                        <ul>
+                            <li><a href="https://facebook.com/baronmeddyusa"><i class="icon-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/baronmeddy"><i class="icon-twitter"></i></a></li>
+                            <li><a href="https://instagram.com/baronmeddy"><i class="icon-instagram"></i></a></li>
+                            <li><a href="https://linkedin.com/company/baronmeddy"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /social -->
+                    <div>
+                        <figure><img src="images/test/biz.svg" alt="" class="img-fluid"></figure>
+                        <h2>Your road to smarter auto insurance starts here!</h2>
+                        <p>Compare quotes, find the perfect coverage, and hit the road with confidence. Drive smart,
+                            save big – your perfect policy is just a few click away!</p>
+
+                    </div>
+                    <div class="copy">©2023 Baron Meddy, Inc.</div>
+                </div>
+            </div>
+            <div class="col-6 ">
+                <!-- /cd-overlay-nav -->
+                <div class="cd-overlay-nav">
+                    <span class=""
+                        style="transform: scaleX(0) scaleY(0); height: 2909.67px; width: 2909.67px; top: -1454.84px; left: -1454.84px;"></span>
+                </div>
+                <!-- /cd-overlay-content -->
+                <div class="cd-overlay-content">
+                    <span class=""
+                        style="transform: scaleX(0) scaleY(0); height: 2909.67px; width: 2909.67px; top: -1454.84px; left: -1454.84px;"></span>
+                </div>
+                <a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+                <!--end-->
+                <div class="text-block scrollable">
+                    <!--two step UserAccountSetup form-->
+                    <div class="form-content-container">
+                        <div id="middle-wizard">
+                            <form id="wrapped" method="POST" action="{{route('auto.quote')}}">
+                                <input id="website" name="website" type="text" value="">
+                                <!-- Leave for security protection, read docs for details -->
+
+                                <div id="step-1" class="form-step">
+                                    <h3 class="main_question"><strong>1/12</strong>Hi there! Tell us about yourself.
+                                    </h3>
+                                    <p>Please make sure it matches the information on your license.</p>
+                                    <div class="form-group">
+                                        <h6>First name</h6>
+                                        <input type="text" name="firstname" id="firstname" class="form-control required"
+                                            placeholder="eg. John">
+                                    </div>
+                                    <div class="form-group">
+                                        <h6>Last name</h6>
+                                        <input type="text" name="lastname" id="lastname" class="form-control required"
+                                            placeholder="eg. Smith">
+                                    </div>
+                                    <div class="form-group">
+                                        <h6>When's your birthday?</h6>
+                                        <input type="text" name="dob" id="dob" class="form-control required"
+                                            placeholder="MM/DD/YYYY">
+                                        <h6 class="error-message" id="dobError"></h6>
+                                    </div>
+                                    <h6>Why we ask for this information?</h6>
+                                    <p>Insurance companies use your age to recommend policies.
+                                        Your answer will help us find more matched providers.
+                                        Don’t worry. Your information is confidential.</p>
+
+                                    <div class="form-group terms">
+                                        <label class="container_check">Please accept our <a
+                                                href="https://www.baronmeddy.com/terms-and-conditions/"
+                                                data-bs-toggle="modal" data-bs-target="#terms-txt">Terms and
+                                                conditions</a>
+                                            <input type="checkbox" name="terms" value="Yes" class="required">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <hr>
+                                    <button class="button btn-navigate-form-step" type="button"
+                                        step_number="2">Next</button>
+                                </div>
+
+                                <!--/step-->
+                                <div id="step-2" class="form-step d-none">
+                                    <h3 class="main_question"><strong>2/12</strong>What is your address?</h3>
+                                    <div class="form-group">
+                                        <p>We need your address to match you with insurance providers in your area</p>
+                                        <h6>Enter your street address including suite or apt number</h6>
+                                        <input type="text" id="streetaddress" name="streetaddress"
+                                            class="form-control required" placeholder="eg. 123 Main St apt 1202">
+                                    </div>
+                                    <div class="form-group">
+                                        <h6>City</h6>
+                                        <input type="text" id="city" name="city" class="form-control required"
+                                            placeholder="e.g: New York">
+                                    </div>
+                                    <div class="form-group">
+                                        <h6>State</h6>
+                                        <div class="styled-select clearfix">
+                                            <input type="text" id="state" name="state" class="form-control required"
+                                                placeholder="State" placeholder="enter your state">
+                                        </div>
+                                        <p> </p>
+                                        <div class="form-group">
+                                            <h6>Zip code</h6>
+                                            <input type="text" name="zipCode" id="zipCode" class="form-control required"
+                                                placeholder="eg. 20500">
+                                        </div>
+                                    </div>
+                                    <div class="stepper-btns mt-4">
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="1">Back</button>
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="3">Next</button>
+                                    </div>
+                                </div>
+
+                                <!--/step-->
+                                <div id="step-3" class="form-step d-none">
+                                    <h3 class="main_question"><strong>3/12</strong>Contact Information</h3>
+                                    <p>We need your contact information to send you quotes.</p>
+                                    <div class="form-group">
+                                        <h6>What's the best phone number to reach you?</h6>
+                                        <input type="text" id="phonenumber" name="phonenumber"
+                                            class="form-control required" placeholder="eg. (123) 456-7890">
+                                        <h6 class="error-message" id="phoneError"></h6>
+                                    </div>
+                                    <div class="form-group">
+                                        <h6>What's your email address?</h6>
+                                        <input type="text" name="email" id="email" class="form-control required"
+                                            placeholder="eg. name@domain.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <h6>When is the best time to reach you?</h6>
+                                        <div class="styled-select clearfix">
+                                            <select class="wide required" name="contactTime" id="contactTime">
+                                                <option value="">-Select an option-</option>
+                                                <option value="morning">Morning between 9 am - 11:30 am</option>
+                                                <option value="afternoon">Afternoon between 12 pm - 6 pm</option>
+                                                <option value="evening">Evening between 6 pm - 9 pm</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <h6>What is your preferred way of contact?</h6>
+                                        <div class="styled-select clearfix">
+                                            <select class="wide required" name="preferredContactMethod"
+                                                id="preferredContactMethod">
+                                                <option value="">-Select an option-</option>
+                                                <option value="email">Email</option>
+                                                <option value="phonecall">Phone</option>
+                                                <option value="email or phone">Either or is fine</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="stepper-btns mt-4">
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="2">Back</button>
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="4">Next</button>
+                                    </div>
+                                </div>
+                                <!-- /step-->
+
+                                <!-- /step-->
+                                <div id="step-4" class="form-step d-none">
+                                    <h3 class="main_question"><strong>4/12</strong>Which of the following best describes
+                                        where you live?</h3>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">I am a home owner
+                                            <input type="radio" name="placeOfResidence" id="placeOfResidence"
+                                                value="Completely Satisfied" class="required"
+                                                onchange="getVals(this, 'placeOfResidence');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">I currently rent
+                                            <input type="radio" name="placeOfResidence" id="placeOfResidence"
+                                                value="Completely Satisfied" class="required"
+                                                onchange="getVals(this, 'placeOfResidence');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">I live with parents/relatives
+                                            <input type="radio" name="placeOfResidence" id="placeOfResidence"
+                                                value="Completely Satisfied" class="required"
+                                                onchange="getVals(this, 'placeOfResidence');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">Other
+                                            <input type="radio" name="placeOfResidence" id="placeOfResidence"
+                                                value="Completely Satisfied" class="required"
+                                                onchange="getVals(this, 'placeOfResidence');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="stepper-btns mt-4">
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="3">Back</button>
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="5">Next</button>
+                                    </div>
+                                </div>
+                                <!-- /step-->
+                                <div id="step-5" class="form-step d-none">
+                                    <h3 class="main_question"><strong>5/12</strong>What’s your main goal here today?
+                                    </h3>
+                                    <p>This won’t impact your application at all — it just helps us get to know you
+                                        better.
+                                    </p>
+
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">I want to get insurance coverage today
+                                            (or
+                                            soon)
+                                            <input type="radio" name="intention" id="intention" value="Quite Satisfied"
+                                                class="required" onchange="getVals(this, 'intention');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">I’m comparing Baron Meddy to other
+                                            quotes
+                                            I’ve gotten
+                                            <input type="radio" name="intention" id="intention"
+                                                value="I’m comparing Ladder to other quotes I’ve gotten"
+                                                class="required" onchange="getVals(this, 'intention');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">I'm here to see my price
+                                            <input type="radio" name="intention" id="intention" value="Satisfied"
+                                                class="required" onchange="getVals(this, 'intention');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">Other
+                                            <input type="radio" name="intention" id="intention"
+                                                value="Extremely Satisfied" class="required"
+                                                onchange="getVals(this, 'intention');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="stepper-btns mt-4">
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="4">Back</button>
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="6">Next</button>
+                                    </div>
+                                </div>
+
+                                <!-- /step-->
+                                <div id="step-6" class="form-step d-none">
+                                    <h3 class="main_question"><strong>6/12</strong> Thanks, now let’s add your first
+                                        vehicle.</h3>
+                                    <h6>Make</h6>
+                                    <div class="form-group">
+                                        <div class="styled-select clearfix">
+                                            <select class="wide required" name="vehicleMake" id="vehicleMake">
+                                                <option value="">-Select-</option>
+                                                <option value="Acura">Acura</option>
+                                                <option value="Alfa Romeo">Alfa Romeo</option>
+                                                <option value="Aston Martin">Astin Martin</option>
+                                                <option value="Audi">Audi</option>
+                                                <option value="BMW">BMW</option>
+                                                <option value="Bentley">Bentley</option>
+                                                <option value="Bollinger">Bollinger</option>
+                                                <option value="Bugatti">Bugatti</option>
+                                                <option value="Buick">Buick</option>
+                                                <option value="Cadillac">Cadillac</option>
+                                                <option value="Canoo">Canoo</option>
+                                                <option value="Chevrolet">Chevrolet</option>
+                                                <option value="Chrysler">Chrysler</option>
+                                                <option value="Delorean">Delorean</option>
+                                                <option value="Dodge">Dodge</option>
+                                                <option value="Ferrari">Ferrari</option>
+                                                <option value="Fiat">Fiat</option>
+                                                <option value="Fisker">Fisker</option>
+                                                <option value="Ford">Ford</option>
+                                                <option value="GMC">GMC</option>
+                                                <option value="Genesis">Genesis</option>
+                                                <option value="Honda">Honda</option>
+                                                <option value="Hummer">Hummer</option>
+                                                <option value="Hyundai">Hyundai</option>
+                                                <option value="Ineos">Ineos</option>
+                                                <option value="Infiniti">Infiniti</option>
+                                                <option value="Jaguar">Jaguar</option>
+                                                <option value="Jeep">Jeep</option>
+                                                <option value="Karma">Karma</option>
+                                                <option value="Kia">Kia</option>
+                                                <option value="Lamborghini">Lamborghini</option>
+                                                <option value="Land Rover">Land Rover</option>
+                                                <option value="Lexus">Lexus</option>
+                                                <option value="Lincol">Lincoln</option>
+                                                <option value="Lordstown">Lordstown</option>
+                                                <option value="Lotus">Lotus</option>
+                                                <option value="Lucid Motors">Lucid Motors</option>
+                                                <option value="Maserati">Maserati</option>
+                                                <option value="Maybach">Maybach</option>
+                                                <option value="Mazda">Mazda</option>
+                                                <option value="McLaren">McLaren</option>
+                                                <option value="Mercedes-AMG">Mercedes-AMG</option>
+                                                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                                <option value="Mercury">Mercury</option>
+                                                <option value="Mini">Mini</option>
+                                                <option value="Mitsubishi">Mitsubishi</option>
+                                                <option value="Nissan">Nissan</option>
+                                                <option value="Oldsmobile">Oldsmobile</option>
+                                                <option value="Polestar">Polestar</option>
+                                                <option value="Pontiac">Pontiac</option>
+                                                <option value="Porsche">Porsche</option>
+                                                <option value="Plymouth">Plymouth</option>
+                                                <option value="Ram">Ram</option>
+                                                <option value="Ratis">Ratis</option>
+                                                <option value="Rivian">Rivian</option>
+                                                <option value="Plymouth">Plymouth</option>
+                                                <option value="Rolls-Royce">Rolls-Royce</option>
+                                                <option value="Saab">Saab</option>
+                                                <option value="Saturn">Saturn</option>
+                                                <option value="Scion">Scion</option>
+                                                <option value="Subaru">Subaru</option>
+                                                <option value="Suzuki">Suziki</option>
+                                                <option value="Tesla">Tesla</option>
+                                                <option value="Toyota">Toyota</option>
+                                                <option value="Volkswagen">Volkswagen</option>
+                                                <option value="VinFast">VinFast</option>
+                                                <option value="Volvo">Volvo</option>
+                                            </select>
+                                        </div>
+                                        <p> </p>
+                                        <h6>Model</h6>
+                                        <div class="form-group">
+                                            <input type="text" name="vehicleModel" id="vehicleModel"
+                                                class="form-control required" placeholder="eg. Altima">
+                                        </div>
+                                        <p> </p>
+                                        <div class="form-group">
+                                            <input type="number" name="vehicleYear" id="vehicleYear"
+                                                class="form-control required" placeholder="Year">
+                                        </div>
+                                        <p> </p>
+                                        <h3 class="main_question"><strong></strong>Do you currently have an auto
+                                            insurance
+                                            policy?</h3>
+                                        <div class="form-group">
+                                            <label class="container_radio version_2">Yes
+                                                <input type="radio" name="haveVehicleInsurance"
+                                                    id="haveVehicleInsurance" value="Completely Satisfied"
+                                                    class="required" onchange="getVals(this, 'question_1');">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="container_radio version_2">No
+                                                <input type="radio" name="haveVehicleInsurance"
+                                                    id="haveVehicleInsurance" value="Completely Satisfied"
+                                                    class="required" onchange="getVals(this, 'question_1');">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="stepper-btns mt-4">
+                                            <button class="button btn-navigate-form-step" type="button"
+                                                step_number="5">Back</button>
+                                            <button class="button btn-navigate-form-step" type="button"
+                                                step_number="7">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- /step-->
+                                <div id="step-7" class="form-step d-none">
+                                    <h3 class="main_question"><strong>7/12</strong> Just a little more infromation about
+                                        your vehicle.</h3>
+                                    <h6>Does your vehicle have any safety feature?</h6>
+                                    <p>Select all that applies</p>
+                                    <div class="form-group">
+                                        <label class="container_check version_2">Air bag
+                                            <input type="checkbox" name="safetyFeature[]" id="safetyFeature[]"
+                                                value="Google Search Engine" class="required"
+                                                onchange="getVals(this, 'question_2');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_check version_2">Automated parking
+                                            <input type="checkbox" name="safetyFeature[]" id="safetyFeature[]"
+                                                value="Google Search Engine" class="required"
+                                                onchange="getVals(this, 'question_2');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_check version_2">Backup camera
+                                            <input type="checkbox" name="safetyFeature[]" id="safetyFeature[]"
+                                                value="Google Search Engine" class="required"
+                                                onchange="getVals(this, 'question_2');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_check version_2">Blindspot warning
+                                            <input type="checkbox" name="safetyFeature[]" id="safetyFeature[]"
+                                                value="Google Search Engine" class="required"
+                                                onchange="getVals(this, 'question_2');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_check version_2">Lane change assist
+                                            <input type="checkbox" name="safetyFeature[]" id="safetyFeature[]"
+                                                value="Google Search Engine" class="required"
+                                                onchange="getVals(this, 'question_2');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <p> </p>
+                                    <div class="form-group">
+                                        <h6>Automobile VIN</h6>
+                                        <input type="text" name="automobileVin" id="automobileVin"
+                                            class="form-control required" placeholder="eg. 4Y1SL65848Z411439">
+                                    </div>
+                                    <div class="stepper-btns mt-4">
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="6">Back</button>
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="8">Next</button>
+                                    </div>
+                                </div>
+
+                                <!-- /step-->
+                                <div id="step-8" class="form-step d-none">
+                                    <h3 class="main_question"><strong>8/12</strong> Vehicle usage</h3>
+                                    <h6>Primary use of the vehicle</h6>
+                                    <div class="styled-select clearfix">
+                                        <select class="wide required" name="vehicleUsage" id="vehicleUsage">
+                                            <option value="">-Select-</option>
+                                            <option>Personal/Commuting</option>
+                                            <option>Pleasure</option>
+                                            <option>Business/rideshare</option>
+                                        </select>
+                                    </div>
+                                    <p> </p>
+                                    <h6>How many drivers will be included in this policy?</h6>
+                                    <div class="styled-select clearfix">
+                                        <select class="wide required" name="Drivers" id="Drivers">
+                                            <option value="">-Select-</option>
+                                            <option>One (myself)</option>
+                                            <option>Two</option>
+                                            <option>Three</option>
+                                            <option>Four</option>
+                                            <option>Five or more</option>
+                                        </select>
+                                    </div>
+
+                                    <p></p>
+                                    <div class="form-group">
+                                        <h6>Estimated annual mileage per year?</h6>
+                                        <input type="text" name="mileage" id="mileage" class="form-control required"
+                                            placeholder="eg. 3500">
+                                    </div>
+                                    <div class="stepper-btns mt-4">
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="7">Back</button>
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="9">Next</button>
+                                    </div>
+                                </div>
+
+                                <!-- /step-->
+                                <div id="step-9" class="form-step d-none">
+                                    <h3 class="main_question"><strong>9/12</strong> Driving History</h3>
+                                    <h6>When was your license issued?</h6>
+                                    <p> </p>
+                                    <div class="form-group">
+                                        <input type="text" name="licenseIssueDate" id="licenseIssueDate"
+                                            class="form-control required" placeholder="eg. 09/10/2021">
+                                    </div>
+                                    <p> </p>
+                                    <h6>Any accidents or claims in the past three years?</h6>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">Yes
+                                            <input type="radio" name="accidentHistory" id="accidentHistory"
+                                                value="Completely Satisfied" class="required"
+                                                onchange="getVals(this, 'accidentHistory');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">No
+                                            <input type="radio" name="accidentHistory" id="accidentHistory"
+                                                value="Completely Satisfied" class="required"
+                                                onchange="getVals(this, 'accidentHistory');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>If yes, please describe below (we know, life happens)</label>
+                                        <textarea name="accidentDesc" id="accidentDesc" class="form-control"
+                                            style="height:100px;" placeholder="Type your message here..."
+                                            onkeyup="getVals(this, 'accidentDesc');"></textarea>
+                                    </div>
+                                    <div class="stepper-btns mt-4">
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="8">Back</button>
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="10">Next</button>
+                                    </div>
+                                </div>
+
+                                <!-- /step-->
+                                <div id="step-10" class="form-step d-none">
+                                    <h3 class="main_question"><strong>10/12</strong>One last thing</h3>
+                                    <h6>What's your gender at birth?</h6>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">Male
+                                            <input type="radio" name="gender" id="gender" value="Male" class="required"
+                                                onchange="getVals(this, 'gender');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_radio version_2">Female
+                                            <input type="radio" name="gender" id="gender" value="Female"
+                                                class="required" onchange="getVals(this, 'gender');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <h6>What is your marital status?</h6>
+                                    <div class="styled-select clearfix">
+                                        <select class="wide required" name="maritalStatus" id="maritalStatus">
+                                            <option value="">-Select-</option>
+                                            <option value="single">Single</option>
+                                            <option value="married">Married</option>
+                                            <option value="separated">Separated</option>
+                                            <option value="divorced">Divorced</option>
+                                            <option value="widowed">Widowed</option>
+                                        </select>
+                                    </div>
+                                    <p> </p>
+                                    <h6>What’s the highest
+                                        level of education you completed?</h6>
+                                    <div class="styled-select clearfix">
+                                        <select class="wide required" name="education" id="education">
+                                            <option value="">-Select-</option>
+                                            <option value="No degree">No degree</option>
+                                            <option value="High school or GED">High school or GED</option>
+                                            <option value="college">Some college</option>
+                                            <option value="Associate's degree">Associate's degree</option>
+                                            <option value="Bachelor Degree">Bachelor's degree</option>
+                                            <option value="Masters Degree">Master's degree or higher</option>
+                                        </select>
+                                    </div>
+                                    <p> </p>
+                                    <h6>What is your credit score range?</h6>
+                                    <div class="styled-select clearfix">
+                                        <select class="wide required" name="creditScore" id="creditScore">
+                                            <option value="">-Select-</option>
+                                            <option value="poor">Poor (300 - 579)</option>
+                                            <option value="fair">Fair (580 -669)</option>
+                                            <option value="good">Good (670 - 739)</option>
+                                            <option value="excellent">Excellent (740 -799)</option>
+                                            <option value="exceptional">Exceptional (800 -850)</option>
+                                        </select>
+                                    </div>
+                                    <div class="stepper-btns mt-4">
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="9">Back</button>
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="11">Next</button>
+                                    </div>
+                                </div>
+
+                                <!-- /step-->
+                                <div id="step-11" class="form-step d-none">
+                                    <h3 class="main_question"><strong>11/12</strong> Coverage Preferences</h3>
+                                    <h6>What is your desired coverage?</h6>
+                                    <div class="styled-select clearfix">
+                                        <select class="wide required" name="coverage" id="coverage">
+                                            <option value="">-Select-</option>
+                                            <option value="Liability">Liability</option>
+                                            <option value="Full">Full coverage</option>
+                                            <option value="Collision">Collision coverage</option>
+                                            <option value="Comprehensive">Comprehensive coverage</option>
+                                            <option value="Gap insurance">Gap insurance</option>
+                                            <option value="Medical payment">Medical payments coverage</option>
+                                            <option value="Uninsured motoris">Uninsured motorist coverage</option>
+                                            <option value="Perssonal injury protection">Perssonal injury protection
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <p> </p>
+                                    <h6>Save more with special discounts</h6>
+                                    <p>Select all that applies</p>
+                                    <div class="form-group">
+                                        <label class="container_check version_2">Married
+                                            <input type="checkbox" name="getDiscount[]" id="getDiscount"
+                                                value="Google Search Engine" class="required"
+                                                onchange="getVals(this, 'getDiscount');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_check version_2">Clean driving record
+                                            <input type="checkbox" name="getDiscount[]" id="getDiscount"
+                                                value="Google Search Engine" class="required"
+                                                onchange="getVals(this, 'getDiscount');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_check version_2">Homeowner
+                                            <input type="checkbox" name="getDiscount[]" id="getDiscount"
+                                                value="Google Search Engine" class="required"
+                                                onchange="getVals(this, 'getDiscount');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_check version_2">Excellent credit
+                                            <input type="checkbox" name="getDiscount[]" id="getDiscount"
+                                                value="Google Search Engine" class="required"
+                                                onchange="getVals(this, 'getDiscount');">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="container_check version_2">Active military or veteran
+                                            <input type="checkbox" name="getDiscount[]" id="getDiscount"
+                                                value="Google Search Engine" class="required"
+                                                onchange="getVals(this, 'getDiscount');">
+                                            <span class="checkmark"></span>
+                                            <p> </p>
+                                            <p>Click <a href="https://www.baronmeddy.com/insurance/"
+                                                    target="_blank">here</a> to learn the difference with auto insurance
+                                                coverage.</p>
+                                        </label>
+                                    </div>
+                                    <div class="stepper-btns mt-4">
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="10">Back</button>
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="12">Next</button>
+                                    </div>
+
+                                </div>
+                                <!-- /step-->
+
+                                <div id="step-12" class="form-step d-none">
+                                    <h3 class="main_question"><strong>12/12</strong>Let's summarize</h3>
+                                    <div class="summary">
+                                        <ul>
+                                            <li><strong>1</strong>
+                                                <h5>Personal information</h5>
+                                                <p id="firstname"></p>
+                                            </li>
+                                            <li><strong>2</strong>
+                                                <h5>Desired coverage</h5>
+                                                <p id="question_2"></p>
+                                            </li>
+                                            <li><strong>3</strong>
+                                                <h5>Do you think to suggest our company to a friend or parent?</h5>
+                                                <p id="question_3"></p>
+                                                <p id="additional_message"></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="stepper-btns mt-4">
+                                        <button class="button btn-navigate-form-step" type="button"
+                                            step_number="11">Back</button>
+                                        <button type="submit" name="process" class="button">Confirm</button>
+                                    </div>
+                                </div>
+                                <!-- /step-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /bottom-wizard -->
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src=" https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <!--date picker using pikabay-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
+    <!-- form validator-->
+    <script>
+        console.log("Script loaded!");
+        //function to use google maps api ir other apis to collect user address and autofill the corresponding input fields
+        // using google maps api auto complete //
+
+
+        /***Mult-step form navigation function***/
+        /**
+         * Define a function to navigate betweens form steps.
+         * It accepts one parameter. That is - step number.
+         */
+        $(document).ready(function () {
+            const navigateToFormStep = (stepNumber) => {
+                /**
+                 * Hide all form steps.
+                 */
+                document.querySelectorAll(".form-step").forEach((formStepElement) => {
+                    formStepElement.classList.add("d-none");
+                });
+                /**
+                 * Show the current form step (as passed to the function).
+                 */
+                document.querySelector("#step-" + stepNumber).classList.remove("d-none");
+            };
+            /**
+             * Select all form navigation buttons, and loop through them.
+             */
+            document.querySelectorAll(".btn-navigate-form-step").forEach((formNavigationBtn) => {
+                /**
+                 * Add a click event listener to the button.
+                 */
+                formNavigationBtn.addEventListener("click", () => {
+                    /**
+                     * Get the value of the step.
+                     */
+                    const stepNumber = parseInt(formNavigationBtn.getAttribute("step_number"));
+                    /**
+                     * Call the function to navigate to the target form step.
+                     */
+                    navigateToFormStep(stepNumber);
+                });
+            });
+        })
+
+
+        $(document).ready(function () {
+            document.addEventListener('DOMContentLoaded', function () {
+                const streetAddressInput = document.getElementById('streetaddress');
+                const cityInput = document.getElementById('city');
+                const stateInput = document.getElementById('state');
+                const zipInput = document.getElementById('zip');
+
+                // Set up the Google Places autocomplete for the street address
+                const autocompleteStreet = new google.maps.places.Autocomplete(streetAddressInput);
+
+                // Listen for the 'place_changed' event when a street address is selected
+                google.maps.event.addListener(autocompleteStreet, 'place_changed', function () {
+                    const place = autocompleteStreet.getPlace();
+
+                    // Populate city, state, and zip code based on the selected place
+                    cityInput.value = '';
+                    stateInput.value = '';
+                    zipInput.value = '';
+
+                    place.address_components.forEach(function (component) {
+                        if (component.types.includes('locality')) {
+                            cityInput.value = component.long_name;
+                        } else if (component.types.includes('administrative_area_level_1')) {
+                            stateInput.value = component.short_name;
+                        } else if (component.types.includes('postal_code')) {
+                            zipInput.value = component.long_name;
+                        }
+                    });
+                });
+            });
+
+        });
+        ///
+
+
+
+        // function to validate the date of birth input
+
+        $(document).ready(function () {
+            console.log("Document ready!");
+
+            const dobInput = document.getElementById('dob');
+            console.log("dobInput:", dobInput);
+
+            const dobError = document.getElementById('dobError');
+            // Apply input masking for MM/DD/YYYY format
+            $(dobInput).inputmask('99/99/9999', { placeholder: 'MM/DD/YYYY' });
+            console.log("Inputmask initialized");
+
+            const picker = new Pikaday({
+                field: dobInput,
+                format: 'MM/DD/YYYY',
+                yearRange: [1900, moment().year()],
+            });
+
+            console.log("Pikaday initialized");
+            // Attach the validation function to the input's input event for real-time validation
+            dobInput.addEventListener('change', validateDOB);
+
+            function validateDOB() {
+                console.log("validateDOB function triggered");
+                const dobValue = dobInput.value;
+                const isValidDate = /^(\d{2})\/(\d{2})\/(\d{4})$/.test(dobValue);
+
+                if (!isValidDate) {
+                    dobError.textContent = 'Please enter a valid date in the format MM/DD/YYYY.';
+                    return;
+                }
+
+                // Parse the date using moment.js
+                const dobDate = moment(dobValue, 'MM/DD/YYYY');
+                console.log("dobDate :", dobDate)
+
+                //calculate age
+                const age = moment().diff(dobDate, 'years');
+                console.log("age :", age)
+
+                if (age < 18) {
+                    dobError.textContent = 'You must be 18 years or older.';
+                    console.log("You must be 18 years or older.")
+                    //clear the date of birth input
+                    dobInput.value = '';
+                } else {
+                    //clear error if user is 18 years and above
+                    dobError.textContent = '';
+                }
+            }
+
+            // Show the date picker when the input field is focused
+            dobInput.addEventListener('focus', function () {
+                picker.show();
+            });
+
+        });
+
+
+        //Function to enforce usa phone numbers only rule
+        $(document).ready(function () {
+            console.log("validate phone")
+            const phoneNumberInput = document.getElementById('phonenumber');
+            const phoneError = document.getElementById('phoneError');
+
+            // Apply input masking for the phone number format
+            $(phoneNumberInput).inputmask({
+                mask: '+1(999) 999-9999',
+                placeholder: ' ',
+                showMaskOnHover: false,
+                showMaskOnFocus: false,
+            });
+
+            // Validate the entered phone number against NANP
+            phoneNumberInput.addEventListener('blur', function () {
+                const phoneNumber = phoneNumberInput.value.replace(/\D/g, ''); // Remove non-numeric characters
+                const isValidPhoneNumber = /^1?[2-9]\d{2}[2-9](?!11)\d{6}$/.test(phoneNumber);
+
+                if (!isValidPhoneNumber) {
+                    phoneError.textContent = 'Please enter a valid USA phone number.';
+                    console.log("You must be a us citizen.")
+                    //clear phonenumber input
+                    phoneNumberInput.value = '';
+                }
+                else {
+                    //clear error
+                    phoneError.textContent = '';
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

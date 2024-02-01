@@ -6,19 +6,37 @@ export default class AuthController {
     public async register({ request, response, auth }: HttpContextContract) {
 
         const userSchema = schema.create({
-            roleId: schema.number(),
+            firstName: schema.string(),
+            secondName: schema.string(),
             email: schema.string([rules.email(), rules.trim()]),
-            password: schema.string([rules.minLength(8)])
+            password: schema.string([rules.minLength(8)]),
+            streetAddress: schema.string(),
+            aptNo: schema.string(),
+            city: schema.string(),
+            state: schema.string(),
+            zipCode: schema.number(),
         })
-        const data = await request.validate({ schema: userSchema })
+        try {
+            const data = await request.validate({ schema: userSchema });
+            console.log('Received data:', data);
 
-        const user = await User.create(data)
+            const user = await User.create(data);
+            console.log('User created successfully:', user.toJSON());
 
-        await auth.login(user)
+            await auth.login(user);
+            console.log('User logged in successfully.');
 
-        return response.redirect().toPath('/')
+            return response.redirect().toPath('/');
+        } catch (error) {
+            console.error('Error during registration:', error.message);
+            return response.status(500).send({ error: 'Failed to create user.' });
+        }
 
-
+    }
+    //show registration page:
+    public async showRegister({ view }: HttpContextContract) {
+        // Render the 'form.edge' template
+        return view.render('auth/signup');
     }
 
     public async login({ request, response, session, auth }: HttpContextContract) {
@@ -33,6 +51,11 @@ export default class AuthController {
         }
 
         return response.redirect().toPath('/')
+    }
+    //show login page:
+    public async showLogin({ view }: HttpContextContract) {
+        // Render the 'form.edge' template
+        return view.render('auth/login');
     }
 
     public async logout({ response, auth }: HttpContextContract) {

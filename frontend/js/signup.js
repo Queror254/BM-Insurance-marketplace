@@ -1,4 +1,29 @@
-//customer-reviews curousel
+//form submission
+async function submitForm(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('userAccountSetupForm');
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch('http://127.0.0.1:3333/auth/register', {
+            method: 'POST',
+            body: formData,
+        });
+
+        if (response.ok) {
+            // Successful response, handle accordingly (redirect, show success message, etc.)
+            console.log('Registration successful');
+        } else {
+            // Handle errors (show error message, log errors, etc.)
+            console.error('Registration failed');
+        }
+    } catch (error) {
+        console.error('Error during registration:', error);
+    }
+}
+
+/*customer-reviews curousel
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
@@ -18,6 +43,9 @@ $(document).ready(function () {
     })
 });
 /****************************/
+
+
+
 
 /***Mult-step form navigation function***/
 /**

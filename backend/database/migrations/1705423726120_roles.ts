@@ -24,7 +24,12 @@ export default class extends BaseSchema {
       {
         id: Roles.ADMIN,
         name: 'ADMIN',
-      }])
+      },
+      {
+        id: Roles.AGENT,
+        name: 'AGENT',
+      }
+      ])
     })
   }
 

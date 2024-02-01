@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <style>
+        /*normal css*/
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: DM Sans, sans-serif !important;
+            /*overflow: hidden;*/
+        }
+
+        h2 {
+            padding-top: 30px;
+        }
+
+        .text-right {
+            text-align: right;
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5;
+            letter-spacing: 0.00938em;
+        }
+
+        .clr-blue {
+            color: #0766ff !important;
+        }
+
+        .row .cl-1 {
+            min-width: 400px;
+            padding-left: 2rem;
+            background-color: #eaf6ff;
+        }
+
+        .row .cl-2 {
+            min-width: 400px;
+            padding-left: 2rem;
+        }
+
+        .text-block {
+            margin-top: 64px;
+            padding-right: 5rem;
+        }
+
+        .col-lg-6 {
+            box-sizing: border-box;
+        }
+
+        .describe {
+            font-size: 1.3rem !important;
+            display: block;
+        }
+
+        .title {
+            padding-top: 5rem;
+            padding-bottom: 1.5rem;
+            font-size: 2.2rem;
+        }
+
+        .logo {
+            padding-top: 2rem;
+            padding-left: 2rem;
+            width: 50%;
+        }
+
+        .content {
+            padding-left: 2rem;
+            padding-bottom: 6rem;
+        }
+
+        /**/
+
+        /*signup-form css*/
+        #step-2 {
+            /**/
+        }
+
+        form {
+            border: none;
+            padding: 20px;
+        }
+
+        .cl-form {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .cl-form .input0 {
+            width: 120%;
+            padding: 15px;
+            margin-bottom: 16px;
+        }
+
+        .form-optns {
+            padding-top: 40px;
+            padding-left: 30px;
+        }
+
+        .form-optns1 {
+            padding-top: 40px;
+            padding-right: 30px;
+        }
+
+        .email {
+            padding-right: 150px;
+        }
+
+        .email input {
+            width: 252%;
+            padding: 15px;
+        }
+
+        .form-optns3 {
+            padding-top: 10px;
+            padding-right: 30px;
+        }
+
+        .form-optns4 {
+            padding-top: 10px;
+            padding-left: 40px;
+        }
+
+        .form-optns-dd {
+            padding-top: 10px;
+            padding-left: 30px;
+            width: 135px;
+        }
+
+        .form-optns-dd2 {
+            padding-top: 10px;
+            padding-left: 40px;
+            width: 135px;
+        }
+
+        .form-hd {
+            margin: 0;
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            font-size: 2.125rem;
+            line-height: 1.235;
+            letter-spacing: 0.00735em;
+            padding-left: 0.1rem;
+            padding-bottom: 0.5rem;
+            padding-top: 2rem;
+        }
+
+        .form-hd-2 {
+            margin: 0;
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 1.4rem;
+            line-height: 1.235;
+            letter-spacing: 0.00735em;
+            padding-left: 0.1rem;
+            padding-bottom: 0;
+            padding-top: 2rem;
+        }
+
+        .form-lbl {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .input1 {
+            width: 120%;
+            padding: 10px;
+            margin-bottom: 16px;
+        }
+
+        .inputdd {
+            width: 130%;
+            padding: 15px;
+            margin-bottom: 16px;
+        }
+
+        .inputdd2 {
+            width: 130%;
+            padding: 15px;
+            margin-bottom: 16px;
+        }
+
+        .radio-cls {
+            padding-left: 15px;
+        }
+
+        .radio-cls .radio-input {
+            margin-right: 6px;
+            width: 18px;
+        }
+
+        .sb-radio {
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5;
+            letter-spacing: 0.00938;
+            margin-bottom: 0px;
+            padding-right: 18px;
+
+        }
+
+        button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #2b66ff !important;
+            color: #fff;
+            width: 150px;
+            min-width: 64px;
+            padding: 10px 15px;
+            border: 1px solid #4361ee;
+            border-radius: 5px;
+            border-color: #2b66ff;
+            cursor: pointer;
+            float: right;
+            right: 0;
+            margin-left: 300px;
+        }
+
+        .stepper-btns button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #2b66ff !important;
+            color: #fff;
+            width: 150px;
+            min-width: 64px;
+            padding: 10px 15px;
+            border: 1px solid #4361ee;
+            border-radius: 5px;
+            border-color: #2b66ff;
+            cursor: pointer;
+        }
+
+        .stepper-btns {
+            width: 100%;
+        }
+
+        .stepper-btns .btn-navigate-form-step {
+            float: left;
+
+        }
+
+        .stepper-btns .submit-btn {
+            float: right;
+        }
+
+        /*.submt-btn {
+    display: flex;
+    justify-items: right;
+}*/
+
+        /**/
+
+        /*customer-reviews-curosel */
+        .yorum {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+        }
+
+        .owl-carousel {
+            padding-bottom: 5rem;
+            border-radius: 30px;
+            min-width: 100%;
+        }
+
+        .card {
+            display: block;
+            box-shadow: 0 0 3px #0000001a;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            padding-top: 15px;
+            width: 55%;
+            min-width: 55%;
+            height: 20%;
+            left: 125px;
+
+        }
+
+        .owl-item {
+            padding: 10px;
+        }
+
+
+        .card-yazı p {
+            font-size: 15px;
+            display: block;
+            padding: 10px;
+        }
+
+        .card-yazı {
+            background-image: linear-gradient(135deg, rgb(255, 255, 255) 10%, rgb(255, 255, 255) 100%);
+            position: relative;
+            display: flex;
+
+            /*align-items: center;*/
+        }
+
+        .favicon {
+            width: 100%;
+            height: auto;
+        }
+
+        .favicon img {
+            height: 90px;
+            width: 90px !important;
+            position: absolute;
+            bottom: -45px;
+            left: 39%;
+            border-radius: 100px;
+            border: 8px solid white;
+        }
+
+
+
+        .puan img {
+            height: 20px;
+            width: 20px !important;
+        }
+
+        .isim {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .isim h1 {
+            font-size: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .isim p {
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-family: sans-serif;
+        }
+
+        /*custormer-reviews-end*/
+
+        /* Mobile-First Approach */
+        @media (max-width: 768px) {
+
+            .cl-1 {
+                display: none;
+            }
+
+            form input {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .email {
+                padding-right: 0px;
+                padding-top: 20px;
+            }
+
+            .email input {
+                width: 100%;
+            }
+
+            .form-optns {
+                padding-top: 20px;
+                padding-left: 0px;
+            }
+
+            .form-optns1 {
+                padding-top: 20px;
+                padding-right: 0px;
+            }
+
+            .form-optns3 {
+                padding-top: 20px;
+                padding-right: 0px;
+            }
+
+            .form-optns4 {
+                padding-top: 20px;
+                padding-left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <div class="container-xxl">
+        <div class="row">
+            <div class="cl-1 col-lg-6">
+                <div class="logo">
+                    <img src="img/BMlogo.png" alt="">
+                </div>
+                <div class="content">
+                    <h1 class="title"><b>Create an account with Baron Meddy</b></h1>
+                    <p class="describe">
+                        Sign up to gain full access to our products and services.<br>
+                        Answer a couple of questions to get started.<br>
+                    </p>
+                </div>
+                <div class="owl-carousel">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="card-yazı">
+                                <p>Baron Meddy Escrow exceeded our expectations<br>in handling
+                                    complex corporate
+                                    transactions. Their<br>professionalism, combined with airtight security,<br>
+                                    sets them apart in the industry.<br>
+                                </p>
+                            </div>
+                            <div class="puan d-flex mb-4">
+                                <div class="d-flex justify-content-left ml-2 mr-4">
+                                    <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                                    <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                                    <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                                    <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                                    <img src="https://i.hizliresim.com/GDVyr3.png" alt="">
+                                </div>
+                                <div class="isim d-flex mr-4">
+                                    <h1 class="justify-content-center mr-1">Victor M.-</h1>
+                                    <p class=" justify-content-left"><i>Developer</i></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cl-2 col-lg-6">
+                <div class="text-block">
+                    <div class="text-right">
+                        <a href="login.html">
+                            <span style="color:black;">Already have an account?</span>
+                            <span class="clr-blue">Sign In</span>
+                        </a>
+                    </div>
+                    <!--two step UserAccountSetup form-->
+                    <form id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data"
+                        method="POST" action="{{'auth.register'}}">
+
+                        <!--Form step1-->
+                        <section id="step-1" class="form-step">
+                            <div class="cl-form">
+                                <h3 class="form-hd">Let's get you set up</h3>
+                                <div class="form-optns1">
+                                    <label class="form-lbl" for="firstName">First Name</label>
+                                    <input type="text" class="input0" id="firstName" name="firstName"
+                                        placeholder="Please enter first name" required>
+                                </div>
+                                <div class="form-optns">
+                                    <label class="form-lbl" for="lastName">Last Name</label>
+                                    <input type="text" class="input0" id="lastName" name="lastName"
+                                        placeholder="Please enter last name" required>
+                                </div>
+
+                                <div class="email">
+                                    <label class="form-lbl" for="email">Email</label>
+                                    <input type="email" class="input1" id="email" name="email"
+                                        placeholder="Please enter email" required>
+                                </div>
+
+                                <div class="form-optns3">
+                                    <label class="form-lbl" for="password">Password</label>
+                                    <input type="password" class="input0" id="password" name="password"
+                                        placeholder="Please enter password" required>
+                                </div>
+
+                                <div class="form-optns4">
+                                    <label class="form-lbl" for="confirmPassword">Confirm Password</label>
+                                    <input type="password" class="input0" id="confirmPassword" name="confirmPassword"
+                                        placeholder="Please re-enter password" required>
+                                </div>
+                            </div>
+                            <div class="row radio-cls">
+                                <input type="radio" class="radio-input" id="seller" name="user_type" value="seller"
+                                    required>
+                                <label class="sb-radio">Seller</label>
+
+                                <input type="radio" class="radio-input" id="buyer" name="user_type" value="buyer"
+                                    required>
+                                <label class="sb-radio">Buyer</label>
+                            </div>
+
+                            <button class="button btn-navigate-form-step mt-4" type="submit"
+                                step_number="2">Continue</button>
+                        </section>
+
+                        <!--Form step 2-->
+                        <section id="step-2" class="form-step d-none">
+                            <div class="cl-form">
+                                <h3 class="form-hd">Where are you located</h3>
+                                <h4 class="form-hd-2">What is your home Address?</h4>
+                                <div class="form-optns1">
+                                    <label class="form-lbl" for="streetAddress">Street Address</label>
+                                    <input type="text" class="input0" id="streetAddress" name="streetAddress"
+                                        placeholder="e.g 123 Main Street" required>
+                                </div>
+                                <div class="form-optns">
+                                    <label class="form-lbl" for="aptNo">Suit/Apt number</label>
+                                    <input type="text" class="input0" id="aptNo" name="aptNo" placeholder="e.g #1200"
+                                        required>
+                                </div>
+
+                                <div class="form-optns3">
+                                    <label class="form-lbl" for="city">City</label>
+                                    <input type="text" class="input0" id="city" name="city"
+                                        placeholder="Please enter city" required>
+                                </div>
+
+                                <div class="form-optns-dd">
+                                    <label class="form-lbl" for="state">State</label>
+                                    <input type="text" class="inputdd" id="state" name="state" placeholder="Enter State"
+                                        required>
+                                </div>
+
+                                <div class="form-optns-dd2">
+                                    <label class="form-lbl" for="zipCode">Zip Code</label>
+                                    <input type="text" class="inputdd2" id="zipCode" name="zipCode"
+                                        placeholder="Enter Zip Code" required>
+                                </div>
+                            </div>
+                            <div class="stepper-btns mt-4">
+                                <button class="button btn-navigate-form-step mr-4" type="button"
+                                    step_number="1">Previous</button>
+
+                                <button type="submit" class="button submit-btn">Submit</button>
+                                <!--onclick="submitForm(event)"-->
+                            </div>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src=" https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        //form submission
+        async function submitForm(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('userAccountSetupForm');
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('http://127.0.0.1:3333/auth/register', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    // Successful response, handle accordingly (redirect, show success message, etc.)
+                    console.log('Registration successful');
+                } else {
+                    // Handle errors (show error message, log errors, etc.)
+                    console.error('Registration failed');
+                }
+            } catch (error) {
+                console.error('Error during registration:', error);
+            }
+        }
+
+        /*customer-reviews curousel
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
+        });
+        /****************************/
+
+
+
+
+        /***Mult-step form navigation function***/
+        /**
+         * Define a function to navigate betweens form steps.
+         * It accepts one parameter. That is - step number.
+         */
+        const navigateToFormStep = (stepNumber) => {
+            /**
+             * Hide all form steps.
+             */
+            document.querySelectorAll(".form-step").forEach((formStepElement) => {
+                formStepElement.classList.add("d-none");
+            });
+            /**
+             * Show the current form step (as passed to the function).
+             */
+            document.querySelector("#step-" + stepNumber).classList.remove("d-none");
+        };
+        /**
+         * Select all form navigation buttons, and loop through them.
+         */
+        document.querySelectorAll(".btn-navigate-form-step").forEach((formNavigationBtn) => {
+            /**
+             * Add a click event listener to the button.
+             */
+            formNavigationBtn.addEventListener("click", () => {
+                /**
+                 * Get the value of the step.
+                 */
+                const stepNumber = parseInt(formNavigationBtn.getAttribute("step_number"));
+                /**
+                 * Call the function to navigate to the target form step.
+                 */
+                navigateToFormStep(stepNumber);
+            });
+        });
+
+        /**********************************************************************/
+
+    </script>
+</body>
+
+</html>

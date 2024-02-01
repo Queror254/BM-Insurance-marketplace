@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <style>
+        body {
+            font-family: DM Sans, sans-serif !important;
+            /*overflow: hidden;*/
+        }
+
+        .logo {
+            margin: 0px 16px 0px 0px;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: rgb(37, 34, 74);
+            font-family: monospace;
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            text-decoration: none;
+        }
+
+        .logo img {
+            align-self: flex-start;
+            width: 230px;
+
+
+        }
+
+
+
+        .top-rw {
+            position: relative;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+            align-items: end !important;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .row {
+            width: 100%;
+        }
+
+        .text-right {
+            text-align: right;
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5;
+            letter-spacing: 0.00938em;
+        }
+
+        .form-lbl {
+            position: relative;
+            display: block;
+            color: #000 !important;
+            font-weight: 500 !important;
+            margin-bottom: 5px;
+            /*
+    
+    margin-bottom: 8px; */
+        }
+
+        .input0 {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+
+        }
+
+        .remforgt-ctnr {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        form {
+            margin-bottom: 70px;
+        }
+
+        .form-hd {
+            padding-top: 2rem;
+            margin: 0px 0px 16px;
+            margin-bottom: 16px;
+            font-family: DM Sans, sans-serif !important;
+            font-size: 2.125rem;
+            line-height: 1.235;
+            letter-spacing: 0.00735em;
+            font-weight: 500;
+        }
+
+        button {
+            display: inline-flex;
+            position: relative;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            background: #a8a9aa !important;
+            color: #fff !important;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+            width: 100%;
+            min-width: 64px;
+            line-height: 1.75;
+            letter-spacing: 0.02857em;
+            border-radius: 4px !important;
+            padding: 12px 16px !important;
+            font-size: 17px;
+            text-transform: capitalize !important;
+            border: 0px;
+            user-select: none;
+            vertical-align: middle;
+            appearance: none;
+
+        }
+
+        button:hover {
+            cursor: pointer;
+            background: #2b66ff !important;
+        }
+
+        .footer {
+            bottom: 0pxya;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                display: none;
+            }
+
+            .center-col {
+                padding-left: 20px;
+            }
+
+            .remforgt-ctnr {
+                flex-direction: column;
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <div class="container-xxl">
+        <div class="container-fluid">
+            <div class="row top-rw  texi-right">
+                <div class="logo">
+                    <img src="img/BMlogo.png" alt="">
+                </div>
+                <div class="sgnup_lnk">
+                    <h6 class=" mt-4">New to Baron Meddy? <a href="signup.html" alt="">Sign Up</a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-4.5 center-col">
+                <h3 class="form-hd">Welcome Back!</h3>
+                <h6 class="mb-4">Signin to your Baron Meddy account</h6>
+
+                <form action="{{'route.login'}}" method="POST" id="loginForm">
+                    <label class="form-lbl" for="email">Email</label>
+                    <input type="text" class="input0" id="email" name="email" placeholder="Please enter Email" required>
+
+                    <label class="form-lbl" for="password">Password</label>
+                    <input type="password" class="input0" id="password" name="password"
+                        placeholder="Please enter Password" required>
+                    <div class="remforgt-ctnr">
+                        <div class="rememember">
+                            <input type="checkbox" id="remememberMe" name="remememberMe" required>
+                            <label for="remememberMe">Remember this account</label>
+                        </div>
+                        <div class="forgt-pass">
+                            <h6>Forgot password? <a href="#">Reset</a> </h6>
+                        </div>
+                    </div>
+
+                    <button type="submit">Login</button>
+                </form>
+
+                <div class="footer">
+                    @2024 Baron Meddy Inc. <a href="">Privacy Policy</a> | <a href="">Terms and Conditions</a>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+
+    </div>
+
+    <script src="#" async defer></script>
+</body>
+
+</html>

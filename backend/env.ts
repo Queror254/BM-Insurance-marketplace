@@ -27,7 +27,8 @@ export default Env.rules({
 
 	DB_CONNECTION: Env.schema.string(),
 
-	//Variables for the PostgreSQL driver
+	// Variables for the MYSQL driver
+
 	PG_HOST: Env.schema.string({ format: 'host' }),
 	PG_PORT: Env.schema.number(),
 	PG_USER: Env.schema.string(),

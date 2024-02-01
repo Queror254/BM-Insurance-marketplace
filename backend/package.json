@@ -10,19 +10,25 @@
   },
   "devDependencies": {
     "@adonisjs/assembler": "^5.9.6",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.0",
     "@japa/preset-adonis": "^1.2.0",
     "@japa/runner": "^2.5.1",
+    "@symfony/webpack-encore": "4.1.1",
     "@types/proxy-addr": "^2.0.3",
     "@types/source-map-support": "^0.5.10",
     "adonis-preset-ts": "^2.1.0",
     "pino-pretty": "^10.3.1",
     "typescript": "~4.6",
+    "webpack": "^5.72",
+    "webpack-cli": "^4.9.1",
     "youch": "^3.3.3",
     "youch-terminal": "^2.2.3"
   },
   "dependencies": {
     "@adonisjs/auth": "^8.2.3",
     "@adonisjs/core": "^5.9.0",
+    "@adonisjs/cors": "^2.2.1",
     "@adonisjs/lucid": "18.4.0",
     "@adonisjs/repl": "^3.1.11",
     "@adonisjs/session": "^6.4.0",
@@ -32,6 +38,7 @@
     "pg": "^8.11.3",
     "phc-argon2": "^1.1.4",
     "proxy-addr": "^2.0.7",
+    "puppeteer": "^21.10.0",
     "reflect-metadata": "^0.2.1",
     "source-map-support": "^0.5.21"
   }

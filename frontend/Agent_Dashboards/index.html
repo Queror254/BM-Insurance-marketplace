@@ -21,16 +21,16 @@
     </a>
     <ul class="side-menu">
       <li class="active">
-        <a href="#"><i class="bx bxs-dashboard"></i>Dashboard</a>
+        <a><i class="bx bxs-dashboard"></i>Dashboard</a>
       </li>
       <li>
-        <a href="#"><i class="bx bx-listings"></i>Listings</a>
+        <a><i class="bx bx-listings"></i>Listings</a>
       </li>
       <li>
-        <a href="#"><i class="bx bx-p-buyers"></i>Potential Buyers</a>
+        <a><i class="bx bx-p-buyers"></i>Potential Buyers</a>
       </li>
       <li>
-        <a href="#"><i class="bx bx-b-offers"></i>Buying Offers</a>
+        <a><i class="bx bx-b-offers"></i>Buying Offers</a>
       </li>
     </ul>
 
@@ -52,7 +52,10 @@
 
     <!--Nav bar-->
     <nav>
-      <i class="bx bx-menu"></i>
+      <!--<a href="#" class="cls-sidebar">close<i class="bi bi-menu"></i></a>-->
+      <a href="#" class="cls-sidebar">
+        <img src="images/icons8-menu.svg" alt="" />
+      </a>
       <form action="#">
         <div class="form-input">
           <input type="search" placeholder="Search................" />
@@ -79,14 +82,9 @@
     <!--Nav bar end-->
 
     <!-- Main Start -->
-    <main class="d-none" id="main-1">
+    <main class="" id="main-1">
       <div class="header">
         <h1>Dashboard</h1>
-        <ul class="breadcrumb">
-          <li><a href="#" class="active">Analytics</a></li>
-          /
-          <li><a href="#">Content</a></li>
-        </ul>
       </div>
 
       <!--============= cards start ===============-->
@@ -135,7 +133,7 @@
               <tr>
                 <td>103326</td>
                 <td class="img_content">
-                  <img src="./img/1.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>John Doe</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -145,7 +143,7 @@
               <tr>
                 <td>103626</td>
                 <td class="img_content">
-                  <img src="./img/2.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>Jullee Smith</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -155,7 +153,7 @@
               <tr>
                 <td>103926</td>
                 <td class="img_content">
-                  <img src="./img/3.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>Willims</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -165,7 +163,7 @@
               <tr>
                 <td>103326</td>
                 <td class="img_content">
-                  <img src="./img/1.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>John Doe</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -175,7 +173,7 @@
               <tr>
                 <td>103626</td>
                 <td class="img_content">
-                  <img src="./img/2.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>Jullee Smith</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -236,13 +234,15 @@
     </main>
 
     <!--Main 2-->
-    <main class="" id="main-2">
+    <main class="d-none" id="main-2">
       <div class="header">
         <h1>Listings</h1>
+        <a class="add_btn"><i class="fa fa-plus btn-create_listing">Create Listing</i></a>
       </div>
 
       <!--============= Filter Card Start ===============-->
       <div class="filter_card">
+        <h1 class="d-none listing-header">Insurance Listing : </h1>
         <form action="#" method="get" class="form-card">
           <select class="filter-options" id="insuranceType" name="insuranceType">
             <option value="" selected disabled hidden>All Categories</option>
@@ -287,6 +287,321 @@
           <button type="submit" class="fcd-btn btn-primary">Apply<i class="bi bi-search"></i></button>
         </form>
       </div>
+
+      <div class="d-none listing-card">
+        <form action="#" method="get" class="listing-form">
+          <label for="companyName">Company Name : </label>
+          <input type="text" name="companyName" id="companyName" placeholder="Enter your company name">
+
+          <label for="coverage">Coverage : </label>
+          <input type="text" name="coverage" id="coverage" placeholder="Enter your coverage">
+
+          <label for="payment">Annual Payment : </label>
+          <input type="number" name="payment" id="payment" placeholder="Enter your payment">
+          <label for="discount">Discount : </label>
+          <input type="json" name="discount" id="discount" placeholder="Enter the discount you offer">
+
+          <button type="submit" class="lcd-btn btn-primary">Create</button>
+        </form>
+      </div>
+      <!--Result-container-start-->
+      <div class="result-container">
+        <!-- result card block -->
+        <div class="result-card">
+          <div class="details">
+            <img src="images/State-Farm-Logo.png" alt="Company Logo" class="logo">
+            <div class="value">State Farm</div>
+            <div class="label">Carrier</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Full Coverage</div>
+            <div class="label">Coverage</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">1</div>
+            <div class="label">Drivers</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Monthly</div>
+            <div class="label">Payment</div>
+          </div>
+
+          <div class="money-details">
+            <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+            </div>
+            <a href="details_page.html" class="view-details">Edit</a>
+          </div>
+          <div class="horizontal-line"></div>
+
+        </div>
+        <!-- End of result card block -->
+
+        <!-- result card block -->
+        <div class="result-card">
+          <div class="details">
+            <img src="images/State-Farm-Logo.png" alt="Company Logo" class="logo">
+            <div class="value">State Farm</div>
+            <div class="label">Carrier</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Full Coverage</div>
+            <div class="label">Coverage</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">1</div>
+            <div class="label">Drivers</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Monthly</div>
+            <div class="label">Payment</div>
+          </div>
+
+          <div class="money-details">
+            <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+            </div>
+            <a href="details_page.html" class="view-details">Edit</a>
+          </div>
+          <div class="horizontal-line"></div>
+
+        </div>
+        <!-- End of result card block -->
+
+        <!-- result card block -->
+        <div class="result-card">
+          <div class="details">
+            <img src="images/State-Farm-Logo.png" alt="Company Logo" class="logo">
+            <div class="value">State Farm</div>
+            <div class="label">Carrier</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Full Coverage</div>
+            <div class="label">Coverage</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">1</div>
+            <div class="label">Drivers</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Monthly</div>
+            <div class="label">Payment</div>
+          </div>
+
+          <div class="money-details">
+            <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+            </div>
+            <a href="details_page.html" class="view-details">Edit</a>
+          </div>
+          <div class="horizontal-line"></div>
+
+        </div>
+        <!-- End of result card block -->
+
+        <!-- result card block -->
+        <div class="result-card">
+          <div class="details">
+            <img src="images/State-Farm-Logo.png" alt="Company Logo" class="logo">
+            <div class="value">State Farm</div>
+            <div class="label">Carrier</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Full Coverage</div>
+            <div class="label">Coverage</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">1</div>
+            <div class="label">Drivers</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Monthly</div>
+            <div class="label">Payment</div>
+          </div>
+
+          <div class="money-details">
+            <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+            </div>
+            <a href="details_page.html" class="view-details">Edit</a>
+          </div>
+          <div class="horizontal-line"></div>
+
+        </div>
+        <!-- End of result card block -->
+
+        <!-- result card block -->
+        <div class="result-card">
+          <div class="details">
+            <img src="images/State-Farm-Logo.png" alt="Company Logo" class="logo">
+            <div class="value">State Farm</div>
+            <div class="label">Carrier</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Full Coverage</div>
+            <div class="label">Coverage</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">1</div>
+            <div class="label">Drivers</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Monthly</div>
+            <div class="label">Payment</div>
+          </div>
+
+          <div class="money-details">
+            <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+            </div>
+            <a href="details_page.html" class="view-details">Edit</a>
+          </div>
+          <div class="horizontal-line"></div>
+
+        </div>
+        <!-- End of result card block -->
+
+        <!-- result card block -->
+        <div class="result-card">
+          <div class="details">
+            <img src="images/State-Farm-Logo.png" alt="Company Logo" class="logo">
+            <div class="value">State Farm</div>
+            <div class="label">Carrier</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Full Coverage</div>
+            <div class="label">Coverage</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">1</div>
+            <div class="label">Drivers</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Monthly</div>
+            <div class="label">Payment</div>
+          </div>
+
+          <div class="money-details">
+            <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+            </div>
+            <a href="details_page.html" class="view-details">Edit</a>
+          </div>
+          <div class="horizontal-line"></div>
+
+        </div>
+        <!-- End of result card block -->
+
+        <!-- result card block -->
+        <div class="result-card">
+          <div class="details">
+            <img src="images/State-Farm-Logo.png" alt="Company Logo" class="logo">
+            <div class="value">State Farm</div>
+            <div class="label">Carrier</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Full Coverage</div>
+            <div class="label">Coverage</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">1</div>
+            <div class="label">Drivers</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Monthly</div>
+            <div class="label">Payment</div>
+          </div>
+
+          <div class="money-details">
+            <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+            </div>
+            <a href="details_page.html" class="view-details">Edit</a>
+          </div>
+          <div class="horizontal-line"></div>
+
+        </div>
+        <!-- End of result card block -->
+
+        <!-- result card block -->
+        <div class="result-card">
+          <div class="details">
+            <img src="images/State-Farm-Logo.png" alt="Company Logo" class="logo">
+            <div class="value">State Farm</div>
+            <div class="label">Carrier</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Full Coverage</div>
+            <div class="label">Coverage</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">1</div>
+            <div class="label">Drivers</div>
+          </div>
+
+          <div class="details">
+            <div class="resultcardspacer"></div>
+            <div class="value">Monthly</div>
+            <div class="label">Payment</div>
+          </div>
+
+          <div class="money-details">
+            <div class="pay"><sup style="vertical-align: text-top; font-weight: 600;">$</sup><b
+                style="font-size: 30px;">115</b><b style="font-weight: 500;">/mo</b>
+            </div>
+            <a href="details_page.html" class="view-details">Edit</a>
+          </div>
+          <div class="horizontal-line"></div>
+
+        </div>
+        <!-- End of result card block -->
+      </div>
       <!--============= bottom Data Start ===============-->
       <div class="bottom_data">
       </div>
@@ -297,51 +612,12 @@
     <main class="d-none" id="main-3">
       <div class="header">
         <h1>Potential Buyers</h1>
-        <ul class="breadcrumb">
-          <li><a href="#" class="active">Analytics</a></li>
-          /
-          <li><a href="#">Content</a></li>
-        </ul>
       </div>
-
-      <!--============= cards start ===============-->
-      <ul class="cards">
-        <li>
-          <i class="bx bx-group"></i>
-          <span class="info">
-            <h3>7,373</h3>
-            <p>New Users</p>
-          </span>
-        </li>
-        <li>
-          <i class="bx bx-cart-add"></i>
-          <span class="info">
-            <h3>9,373</h3>
-            <p>Total Orders</p>
-          </span>
-        </li>
-        <li>
-          <i class="bx bx-line-chart"></i>
-          <span class="info">
-            <h3>5,373</h3>
-            <p>Site Visits</p>
-          </span>
-        </li>
-        <li>
-          <i class="bx bx-dollar-circle"></i>
-          <span class="info">
-            <h3>$6,373</h3>
-            <p>This Month</p>
-          </span>
-        </li>
-      </ul>
-      <!--============= cards close ===============-->
-
       <!--============= bottom Data Start ===============-->
       <div class="bottom_data">
         <div class="orders">
           <div class="header">
-            <h3>Recent Orders</h3>
+            <!--<h3>Recent Orders</h3>-->
           </div>
           <table>
             <thead>
@@ -357,7 +633,7 @@
               <tr>
                 <td>103326</td>
                 <td class="img_content">
-                  <img src="./img/1.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>John Doe</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -367,7 +643,7 @@
               <tr>
                 <td>103626</td>
                 <td class="img_content">
-                  <img src="./img/2.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>Jullee Smith</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -377,7 +653,7 @@
               <tr>
                 <td>103926</td>
                 <td class="img_content">
-                  <img src="./img/3.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>Willims</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -387,7 +663,7 @@
               <tr>
                 <td>103326</td>
                 <td class="img_content">
-                  <img src="./img/1.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>John Doe</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -397,7 +673,7 @@
               <tr>
                 <td>103626</td>
                 <td class="img_content">
-                  <img src="./img/2.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>Jullee Smith</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -407,105 +683,21 @@
             </tbody>
           </table>
         </div>
-
-        <!--============= Reminder Start ===============-->
-        <div class="reminders">
-          <div class="header">
-            <h3>Reminders</h3>
-          </div>
-          <ul class="task_list">
-            <li class="completed">
-              <div class="task_title">
-                <i class="bx bx-check-circle"></i>
-                <p>Start Our Meeting</p>
-              </div>
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </li>
-            <li class="completed">
-              <div class="task_title">
-                <i class="bx bx-check-circle"></i>
-                <p>Analysis Our Site</p>
-              </div>
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </li>
-
-            <li class="uncomplete">
-              <div class="task_title">
-                <i class="bx bx-x-circle"></i>
-                <p>Play Snooker</p>
-              </div>
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </li>
-            <li class="completed">
-              <div class="task_title">
-                <i class="bx bx-check-circle"></i>
-                <p>Start Our Meeting</p>
-              </div>
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </li>
-            <li class="uncomplete">
-              <div class="task_title">
-                <i class="bx bx-x-circle"></i>
-                <p>Play Snooker</p>
-              </div>
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </li>
-          </ul>
-        </div>
-        <!--============= Reminder Close ===============-->
       </div>
-      <!--============= bottom Data Start ===============-->
+      <!--============= bottom Data End ===============-->
     </main>
 
     <!--Main 4-->
     <main class="d-none" id="main-4">
       <div class="header">
         <h1>Buying Offers</h1>
-        <ul class="breadcrumb">
-          <li><a href="#" class="active">Analytics</a></li>
-          /
-          <li><a href="#">Content</a></li>
-        </ul>
       </div>
-
-      <!--============= cards start ===============-->
-      <ul class="cards">
-        <li>
-          <i class="bx bx-group"></i>
-          <span class="info">
-            <h3>7,373</h3>
-            <p>New Users</p>
-          </span>
-        </li>
-        <li>
-          <i class="bx bx-cart-add"></i>
-          <span class="info">
-            <h3>9,373</h3>
-            <p>Total Orders</p>
-          </span>
-        </li>
-        <li>
-          <i class="bx bx-line-chart"></i>
-          <span class="info">
-            <h3>5,373</h3>
-            <p>Site Visits</p>
-          </span>
-        </li>
-        <li>
-          <i class="bx bx-dollar-circle"></i>
-          <span class="info">
-            <h3>$6,373</h3>
-            <p>This Month</p>
-          </span>
-        </li>
-      </ul>
-      <!--============= cards close ===============-->
 
       <!--============= bottom Data Start ===============-->
       <div class="bottom_data">
         <div class="orders">
           <div class="header">
-            <h3>Recent Orders</h3>
+            <!--<h3>Recent Orders</h3>-->
           </div>
           <table>
             <thead>
@@ -521,7 +713,7 @@
               <tr>
                 <td>103326</td>
                 <td class="img_content">
-                  <img src="./img/1.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>John Doe</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -531,7 +723,7 @@
               <tr>
                 <td>103626</td>
                 <td class="img_content">
-                  <img src="./img/2.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>Jullee Smith</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -541,7 +733,7 @@
               <tr>
                 <td>103926</td>
                 <td class="img_content">
-                  <img src="./img/3.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>Willims</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -551,7 +743,7 @@
               <tr>
                 <td>103326</td>
                 <td class="img_content">
-                  <img src="./img/1.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>John Doe</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -561,7 +753,7 @@
               <tr>
                 <td>103626</td>
                 <td class="img_content">
-                  <img src="./img/2.jpg" alt="" />
+                  <img src="images/profile.jpg" alt="" />
                   <p>Jullee Smith</p>
                 </td>
                 <td>admin@onlineittuts.com</td>
@@ -571,52 +763,6 @@
             </tbody>
           </table>
         </div>
-
-        <!--============= Reminder Start ===============-->
-        <div class="reminders">
-          <div class="header">
-            <h3>Reminders</h3>
-          </div>
-          <ul class="task_list">
-            <li class="completed">
-              <div class="task_title">
-                <i class="bx bx-check-circle"></i>
-                <p>Start Our Meeting</p>
-              </div>
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </li>
-            <li class="completed">
-              <div class="task_title">
-                <i class="bx bx-check-circle"></i>
-                <p>Analysis Our Site</p>
-              </div>
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </li>
-
-            <li class="uncomplete">
-              <div class="task_title">
-                <i class="bx bx-x-circle"></i>
-                <p>Play Snooker</p>
-              </div>
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </li>
-            <li class="completed">
-              <div class="task_title">
-                <i class="bx bx-check-circle"></i>
-                <p>Start Our Meeting</p>
-              </div>
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </li>
-            <li class="uncomplete">
-              <div class="task_title">
-                <i class="bx bx-x-circle"></i>
-                <p>Play Snooker</p>
-              </div>
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </li>
-          </ul>
-        </div>
-        <!--============= Reminder Close ===============-->
       </div>
       <!--============= bottom Data Start ===============-->
     </main>

@@ -16,7 +16,7 @@ sideLInksEl.forEach((links) => {
 });
 
 // sidebar
-const menuBar = document.querySelector(".content nav .bx.bx-menu");
+const menuBar = document.querySelector(".content nav .cls-sidebar");
 const sideBarEl = document.querySelector(".sidebar");
 
 // menus
@@ -123,6 +123,45 @@ document.addEventListener('DOMContentLoaded', function () {
     if (main3) main3.classList.add("d-none");
     if (main4) main4.classList.add("d-none");
   }
+});
+
+//listings navigato:
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('script is loaded')
+  const createListing = document.querySelector('.add_btn')
+  const resultcontainer = document.querySelector(".result-container");
+  const filtercard = document.querySelector(".form-card");
+  const listingcard = document.querySelector(".listing-card");
+  const listingheader = document.querySelector(".listing-header");
+
+  if (createListing) {
+    console.log('Create listing Element found')
+    createListing.addEventListener("click", () => {
+      hideAll();
+      if (listingheader) {
+        listingheader.classList.remove("d-none")
+      } else {
+        console.log('listing-header not-found')
+      }
+      if (listingcard) {
+        listingcard.classList.remove("d-none");
+      } else {
+        console.log('listing-card not-found')
+      }
+    });
+  } else {
+    console.log("Create Listing element not found")
+  }
+
+  function hideAll() {
+    if (resultcontainer) resultcontainer.classList.add("d-none");
+    if (filtercard) filtercard.classList.add("d-none");
+    if (listingcard) listingcard.classList.add("d-none");
+    if (listingheader) listingheader.classList.add("d-none");
+
+
+  }
+
 });
 
 

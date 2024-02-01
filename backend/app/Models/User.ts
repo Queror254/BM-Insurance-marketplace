@@ -13,10 +13,34 @@ export default class User extends BaseModel {
   public roleId: number
 
   @column()
+  public firstName: string
+
+  @column()
+  public secondName: string
+
+  @column()
   public email: string
 
   @column({ serializeAs: null })
   public password: string
+
+  @column()
+  public confirmPassword: string
+
+  @column()
+  public streetAddress: string
+
+  @column()
+  public aptNo: string
+
+  @column()
+  public city: string
+
+  @column()
+  public state: string
+
+  @column()
+  public zipCode: number
 
   @column()
   public rememberMeToken: string | null
