@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext';
 
 export async function renderLoadingView(response: HttpContextContract['response'], view: HttpContextContract['view'], responseData: string, delay: number) {

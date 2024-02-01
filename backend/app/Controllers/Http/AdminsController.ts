@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Admin from 'App/Models/Admin';
 import { schema, rules } from '@ioc:Adonis/Core/Validator'

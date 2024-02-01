@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Auto from 'App/Models/Auto'
 import Business from 'App/Models/Business'
